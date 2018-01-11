@@ -17,29 +17,28 @@
 	<body <?php body_class(); ?>>
 
       <header class="header-container">
-         <nav id="secondary-nav">
-				<ul>
-					<li class="active"><a href="http://desconceito.com">Home</a></li>
-					<li><a href="http://desconceito.com/sobre">Sobre</a></li>
-					<li><a href="http://desconceito.com/autores">Autores</a></li>
-					<li><a href="http://desconceito.com/envie-um-texto">Envie um texto</a></li>
-					<li><a href="http://desconceito.com/contato">Contato</a></li>
-				</ul>
+         <nav id="main-nav">
+				<?php wp_nav_menu( array(
+					'theme_location'  => 'navbar',
+					'menu'            => '',
+					'container'       => 'div',
+					'container_class' => 'menu-{menu-slug}-container',
+					'container_id'    => '',
+					'menu_class'      => 'menu',
+					'menu_id'         => '',
+					'echo'            => true,
+					'fallback_cb'     => 'wp_page_menu',
+					'before'          => '',
+					'after'           => '',
+					'link_before'     => '',
+					'link_after'      => '',
+					'items_wrap'      => '<ul id = "%1$s" class = "%2$s">%3$s</ul>',
+					'depth'           => 0,
+					'walker'          => '',
+				) ); ?>
          </nav>
 			<div class="header">
 				<img class="logo" src="<?php echo get_template_directory_uri(); ?>/img/desco_ext_smaller.svg" alt="">
-				<nav id="main-nav">
-					<ul>
-						<li class="active"><a href="http://desconceito.com">Home</a></li>
-						<li><a href="http://desconceito.com/sobre">Sobre</a></li>
-						<li><a href="http://desconceito.com/autores">Autores</a></li>
-						<li><a href="http://desconceito.com/envie-um-texto">Envie um texto</a></li>
-						<li><a href="http://desconceito.com/contato">Contato</a></li>
-					</ul>
-				</nav>
-				<a id="nox">
-					<i class="fa fa-lightbulb-o" aria-hidden="true"></i>
-					Apagar a luz
-				</a>
+					<i id="nox" class="fa fa-3x fa-lightbulb-o" aria-hidden="true"></i>
 			</div>
       </header>
