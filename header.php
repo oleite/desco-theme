@@ -14,31 +14,39 @@
 		<!--<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i" rel="stylesheet">-->
 		<?php wp_head(); ?>
 	</head>
+
 	<body <?php body_class(); ?>>
 
+
+		<i id="nox" class="fa fa-3x fa-lightbulb-o" aria-hidden="true"></i>
+
+		<div class="sidenav sidenav-closed">
+			<div class="sidenav-container">
+				<div class="sidenav-scroll">
+					<a class="js-toggleSidenav sidenav-close">
+						<i class="fa fa-times" aria-hidden="true"></i>
+					</a>
+					<?php get_sidebar(); ?>
+					
+				</div>
+			</div>
+		</div>
+
+
+
+
+
       <header class="header-container">
-         <nav id="main-nav">
-				<?php wp_nav_menu( array(
-					'theme_location'  => 'navbar',
-					'menu'            => '',
-					'container'       => 'div',
-					'container_class' => 'menu-{menu-slug}-container',
-					'container_id'    => '',
-					'menu_class'      => 'menu',
-					'menu_id'         => '',
-					'echo'            => true,
-					'fallback_cb'     => 'wp_page_menu',
-					'before'          => '',
-					'after'           => '',
-					'link_before'     => '',
-					'link_after'      => '',
-					'items_wrap'      => '<ul id = "%1$s" class = "%2$s">%3$s</ul>',
-					'depth'           => 0,
-					'walker'          => '',
-				) ); ?>
+			<a class="js-toggleSidenav sidenav-open">
+				<i class="fa fa-2x fa-bars" aria-hidden="true"></i>
+			</a>
+
+         <nav id="top-menu">
+				<?php wp_nav_menu( array( 'theme_location' => 'primary' )); ?>
          </nav>
 			<div class="header">
-				<img class="logo" src="<?php echo get_template_directory_uri(); ?>/img/desco_ext_smaller.svg" alt="">
-					<i id="nox" class="fa fa-3x fa-lightbulb-o" aria-hidden="true"></i>
+				<a class="logo" href="<?php home_url(); ?>">
+					<img src="<?php echo get_template_directory_uri(); ?>/img/desco_ext_smaller.svg" alt="">
+				</a>
 			</div>
       </header>
