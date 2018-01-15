@@ -34,7 +34,12 @@ header.header-container {
    }
 
    &.nox {
+      content: "";
       box-shadow: 0 1px 30px $primary-color, 0 0.5px 0 $primary-color;
+
+      background-image: url('../img/bg-img-2.png');
+      background-repeat: no-repeat;
+      background-position: center center;
    }
 }
 

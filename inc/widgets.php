@@ -31,7 +31,7 @@ class Desco_Profile_Widget extends WP_Widget {
 
 
               echo '<a href="' . $profilePicRedirect  . '"><img src="' . $profilePicURL . '" /></a>';
-              echo '<p>Olá <b>' . $current_user->display_name . '</b></p>' ;
+              echo '<p>Olá, <b>' . $current_user->display_name . '</b></p>' ;
               echo '<a href="' . $profilePicRedirect  . '"><i class="fa fa-cog" aria-hidden="true"></i></a>';
 
 

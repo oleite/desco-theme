@@ -42,7 +42,7 @@ function desco_theme_setup() {
 		add_theme_support( 'post-thumbnails' );
 
 		register_nav_menu('primary','Navegação Primária do Cabeçário');
-		register_nav_menu('sidenav','Sidenav');
+		register_nav_menu('user','Navegação do usuário');
 		register_nav_menu('footer1','Footer nav #1');
 	}
 add_action('after_setup_theme', 'desco_theme_setup');
@@ -52,7 +52,7 @@ function desco_sidenav_init(){
 		'name' => 'Sidenav',
 		'id' => 'sidenav',
 		'description' => 'Dynamic left sidebar',
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'before_widget' => '<section id="%1$s" class="desco-widget %2$s">',
 		'after_widget' => "</section>",
 		'before_title' => '<h2 class="widget-title">',
 		'after_title' => "</h2>"

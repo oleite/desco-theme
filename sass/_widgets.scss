@@ -1,0 +1,84 @@
+.desco-widget {
+   margin-bottom: 10px;
+   padding: 0 10px;
+
+   .widget-title { //Widget Titles
+      text-align: center;
+      margin: 0 10px 15px 10px;
+
+      color: #ddd;
+      font-size: 20px;
+      font-weight: 100;
+      background: #5f0002;
+      border-radius: 10px;
+      letter-spacing: 0.2px;
+   }
+
+   hr { //'custom html' widget with '<hl />' in it
+      margin: 20px 75px;
+      border: 0;
+   	border-bottom: 1px dotted #666;
+   }
+}
+
+.desco-profile-widget { //Custom 'Perfil Desconceito' widget
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   position: relative;
+
+   img {
+      border-radius: 50%;
+      border: 2px solid $primary-color;
+   }
+   p {
+      margin: 5px 0 5px 0;
+   }
+   i.fa {
+      position: absolute;
+      left: 50px;
+      top: 45px;
+   }
+}
+
+
+.widget_nav_menu { //Menu Widget
+   ul {
+      margin: 0;
+      padding: 0;
+      padding-left: 30px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      li {
+      list-style: none;
+      color: #888;
+
+         a {
+            //box-sizing: border-box;
+            display: block;
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding: 2px 15px 0 15px;
+
+            transition: 0.1s;
+
+            &:hover,
+            &:active {
+               color: $primary-color;
+               text-shadow: 0px 0px 10px $primary-color;
+            }
+         }
+         &.current-menu-item {
+            box-shadow: -2px 0 0 $primary-color;
+            color: $primary-color;
+            &.nox {
+               text-shadow: 0px 0px 10px $primary-color,0px 0px 3px $primary-color;
+            }
+         }
+      }
+   }
+}

@@ -13,6 +13,12 @@ jQuery(document).ready(function($) {
 
 
 
+   $(document).on('click', 'p', function() {
+      $(this).toggleClass('highlight');
+   });
+
+
+
    //----- NOX -----//
    $(document).on('click', '#nox', function() {
 

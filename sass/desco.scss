@@ -1,7 +1,9 @@
 @import 'variables'; //Variáveis globais
 
-@import 'header';
-@import 'sidenav';
+@import 'header'; //cabeçário
+@import 'sidenav'; //barra lateral esquerda
+@import 'widgets'; //custom widgets
+
 
 
 body, html {
@@ -21,6 +23,9 @@ p {
    &.nox {
       color: $white1;
    }
+   &.highlight {
+      background-color: rgba(250,250,0,0.075);
+   }
 }
 a {
 	text-decoration: none;
@@ -29,6 +34,7 @@ a {
 		@extend a;
 	}
 }
+
 
 
 //--- Botão 'Acender a luz' ---//

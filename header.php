@@ -28,6 +28,9 @@
 					</a>
 					<?php get_sidebar(); ?>
 
+					<p style="margin: auto auto 50px auto; color: #2e323b">
+						Em desenvolvimento
+					</p>
 
 				</div>
 			</div>
