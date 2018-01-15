@@ -20,7 +20,7 @@
 
 		<i id="nox" class="fa fa-3x fa-lightbulb-o" aria-hidden="true"></i>
 
-		<div class="sidenav">
+		<div class="sidenav sidenav-closed">
 			<div class="sidenav-container">
 				<div class="sidenav-scroll">
 					<a class="js-toggleSidenav sidenav-close">
@@ -41,7 +41,7 @@
 
 
       <header class="header-container">
-			<a class="js-toggleSidenav sidenav-open sidenav-opened">
+			<a class="js-toggleSidenav sidenav-open">
 				<i class="fa fa-2x fa-bars" aria-hidden="true"></i>
 			</a>
 
@@ -54,3 +54,7 @@
 				</a>
 			</div>
       </header>
+
+
+
+		<div id="wrapper">

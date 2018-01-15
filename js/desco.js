@@ -1,7 +1,7 @@
 jQuery(document).ready(function($) {
 
 
-   //----- SIDENAV -----//
+//----- SIDENAV -----//
    $(document).on('click', '.js-toggleSidenav', function() {
       $('.sidenav').toggleClass('sidenav-closed');
       if ($(window).width() > 1100) {
@@ -9,17 +9,8 @@ jQuery(document).ready(function($) {
       }
    });
 
-   //----- // -----//
 
-
-
-   $(document).on('click', 'p', function() {
-      $(this).toggleClass('highlight');
-   });
-
-
-
-   //----- NOX -----//
+//----- NOX -----//
    $(document).on('click', '#nox', function() {
 
          $('*').toggleClass('nox');
@@ -46,7 +37,14 @@ jQuery(document).ready(function($) {
 
       $("#nox").css("opacity", op );
    });
-   //----- // ----- //
+
+
+//----- HIGHLIGHT TEXT -----//
+   $('#wrapper').on('click', 'p', function() {
+      $(this).toggleClass('highlight');
+   });
+
+
 
 
 });
