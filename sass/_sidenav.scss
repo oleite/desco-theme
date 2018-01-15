@@ -15,10 +15,17 @@ $sidenav-width: 280px;
    bottom: 0;
    height: 100vh;
 
+   box-shadow: -50px 0 300px black, -1px 0 20px rgba(0,0,0,0.50);
+
    transition: transform 320ms ease;
 
    &.sidenav-closed {
       transform: translateX(-100%);
+      box-shadow: 0 0 0 !important;
+   }
+
+   &.nox {
+      box-shadow: 0.5px 0 0 $primary-color, 10px 0 300px black;
    }
 }
 .sidenav-scroll {
@@ -74,5 +81,65 @@ $sidenav-width: 280px;
    }
    &.sidenav-opened {
       margin-left: $sidenav-width;
+   }
+}
+
+
+
+.desco-profile-widget {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   position: relative;
+
+   img {
+      border-radius: 50%;
+      border: 2px solid $primary-color;
+   }
+   p {
+      margin-top: 5px;
+   }
+   i.fa {
+      position: absolute;
+      left: 50px;
+      top: 45px;
+   }
+}
+
+.widget_nav_menu {
+   ul {
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      li {
+      list-style: none;
+      color: #888;
+
+         a {
+            //box-sizing: border-box;
+            display: block;
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding: 2px 15px 0 15px;
+
+            transition: 0.1s;
+
+            &:hover,
+            &:active {
+               color: $primary-color;
+               text-shadow: 0px 0px 10px $primary-color;
+            }
+         }
+         &.current-menu-item {
+            box-shadow: -2px 0 0 $primary-color;
+            color: $primary-color;
+            &.nox {
+               text-shadow: 0px 0px 10px $primary-color,0px 0px 3px $primary-color;
+            }
+         }
+      }
    }
 }

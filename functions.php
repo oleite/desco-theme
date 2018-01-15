@@ -12,9 +12,15 @@ function desco_enqueue() {
 }
 add_action('wp_enqueue_scripts', 'desco_enqueue');
 
+
+
 require get_template_directory() . '/inc/function-admin.php'; //Admin page
+require get_template_directory() . '/inc/widgets.php';
+
+
 
 //--//--//
+
 
 
 // Inclue google fonts

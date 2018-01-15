@@ -20,14 +20,15 @@
 
 		<i id="nox" class="fa fa-3x fa-lightbulb-o" aria-hidden="true"></i>
 
-		<div class="sidenav sidenav-closed">
+		<div class="sidenav">
 			<div class="sidenav-container">
 				<div class="sidenav-scroll">
 					<a class="js-toggleSidenav sidenav-close">
 						<i class="fa fa-times" aria-hidden="true"></i>
 					</a>
 					<?php get_sidebar(); ?>
-					
+
+
 				</div>
 			</div>
 		</div>
@@ -37,7 +38,7 @@
 
 
       <header class="header-container">
-			<a class="js-toggleSidenav sidenav-open">
+			<a class="js-toggleSidenav sidenav-open sidenav-opened">
 				<i class="fa fa-2x fa-bars" aria-hidden="true"></i>
 			</a>
 
