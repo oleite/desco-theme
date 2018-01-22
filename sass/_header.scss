@@ -19,12 +19,14 @@ header.header-container {
          align-items: center;
 
       .logo {
-         max-width: 75%;
          height: 125px;
          align-self: baseline;
+         padding: 0 85px;
 
          img {
             height: 100%;
+            max-width: 100%;
+
             &.nox {
                filter: drop-shadow( 0 0 5px $primary-color);
             }

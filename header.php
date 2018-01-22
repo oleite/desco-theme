@@ -11,7 +11,6 @@
 		<?php endif; ?>
 		<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
 
-		<!--<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i" rel="stylesheet">-->
 		<?php wp_head(); ?>
 	</head>
 
@@ -49,7 +48,7 @@
 				<?php wp_nav_menu( array( 'theme_location' => 'primary' )); ?>
          </nav>
 			<div class="header">
-				<a class="logo" href="<?php home_url(); ?>">
+				<a class="logo" href="<?php echo home_url(); ?>">
 					<img src="<?php echo get_template_directory_uri(); ?>/img/desco_ext_smaller.svg" alt="">
 				</a>
 			</div>

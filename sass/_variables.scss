@@ -37,3 +37,12 @@ $white1: #f5f5f5;
 	width: 100%;
 	height: auto;
 }
+
+@mixin side-padding($padding: 15px, $padding-mobile: 3px) {
+  padding-right: $padding;
+  padding-left: $padding;
+  @media (max-width: 800px) {
+	  padding-right: $padding-mobile;
+	  padding-left: $padding-mobile;
+  }
+}

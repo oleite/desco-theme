@@ -3,7 +3,7 @@
 @import 'header'; //cabeçário
 @import 'sidenav'; //barra lateral esquerda
 @import 'widgets'; //custom widgets
-
+@import 'posts'; //posts styling
 
 
 body, html {
@@ -11,8 +11,6 @@ body, html {
    padding: 0;
    margin: 0;
    font-family: 'Source Sans Pro', sans-serif;
-
-   min-height: 200vh;
    transition: all 0.15s ease-in-out;
    &.nox {
       background: $base1;
@@ -35,6 +33,9 @@ a {
 	}
 }
 
+#wrapper {
+   min-height: 80vh;
+}
 
 
 //--- Botão 'Acender a luz' ---//
