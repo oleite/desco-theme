@@ -16,30 +16,19 @@ $featured = get_post_meta( get_the_ID(), 'desco_featured', TRUE ); //possíveis 
          <h1 class="entry-title">
             <?php the_title(); ?>
          </h1>
-         <span class="entry-author" >
-            por <?php the_author(); ?>
-         </span>
-
-         <div class="entry-excerpt">
-            <?php the_excerpt(); ?>
-         </div>
       </span>
 
    </header>
-
+   <hr />
    <div class="entry-content">
-
-   </div>
-
-      <hr />
 
       <?php the_content(); ?>
 
-      <hr />
+   </div>
+   <hr />
+   <footer class="entry-footer">
 
-      <footer class="entry-footer">
-         <?php echo desco_posted_footer(); ?>
-      </footer>
 
+   </footer>
 
 </article>

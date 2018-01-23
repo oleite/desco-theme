@@ -11,7 +11,7 @@
 
             	while ( have_posts() ):	the_post();
 
-            		get_template_part( 'template-parts/content_home', get_post_format() );
+            		get_template_part( 'template-parts/content-home', get_post_format() );
 
             	endwhile;
 

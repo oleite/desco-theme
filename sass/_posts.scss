@@ -21,9 +21,17 @@
 }
 
 .entry-title {
+   margin: 0;
    color: $primary-color;
    a:hover {
       color: #ce1e22;
+   }
+}
+
+.entry-author {
+   color: #777;
+   a {
+      color: #333;
    }
 }
 
@@ -78,7 +86,7 @@
       text-align: center;
 
       .standard-featured {
-         max-width: 50vw;
+         max-width: 65vw;
          width: 300px;
          flex-shrink: 0;
       }
