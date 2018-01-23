@@ -1,4 +1,4 @@
-#primary {
+#main {
    padding: 0 100px;
    margin: 0 auto;
 
@@ -6,26 +6,7 @@
    max-width: $max-width;
 }
 
-.container {
-   display: grid;
-   grid-template-columns: auto;
-   grid-gap: 10px 15px;
-
-   article {
-      display: flex;
-   }
-}
-
-.entry-title {
-   margin-top: 0;
-}
-.entry-content {
-   margin-left: 10px;
-}
-
 .standard-featured { //Recommended aspect ratio - 5:8 (1:1.6)
-   width: 150px;
-   max-width: 30vw;
    height: auto;
 
    background-repeat: no-repeat;
@@ -35,11 +16,91 @@
    img {
       max-width: 100%;
       height: auto;
+      transition: all 50ms ease;
    }
 }
 
-@media (min-width: 800px) {
+.entry-title {
+   color: $primary-color;
+   a:hover {
+      color: #ce1e22;
+   }
+}
+
+//Home only
+.home {
+   #main {
+      margin-top: 75px;
+   }
+
    .container {
-      grid-template-columns: auto auto;
+      display: grid;
+      grid-template-columns: auto;
+      grid-gap: 10px 15px;
+
+      .post {
+         display: flex;
+      }
+   }
+
+   .entry-title {
+      margin-top: 0;
+   }
+
+   .entry-content {
+      margin-left: 10px;
+   }
+
+   .standard-featured {
+      max-width: 30vw;
+      width: 150px;
+      img:hover {
+         transform: scale(1.02);
+      }
+   }
+
+   @media (min-width: 800px) {
+      .container {
+         grid-template-columns: auto auto;
+      }
+   }
+
+}
+
+//Single-posts only
+.single-post {
+
+   .entry-header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      text-align: center;
+
+      .standard-featured {
+         max-width: 50vw;
+         width: 300px;
+         flex-shrink: 0;
+      }
+      .entry-headercontent {
+         margin-left: 20px;
+         .entry-title {
+            margin-top: 10px;
+            margin-bottom: 0;
+         }
+         .entry-author {
+            color: #777;
+         }
+      }
+   }
+
+   @media (min-width: 800px) {
+      .entry-title {
+
+      }
+      .entry-header {
+         flex-direction: row;
+         text-align: left;
+      }
    }
 }

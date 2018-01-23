@@ -17,6 +17,9 @@ body, html {
       background: $base1;
    }
 }
+h1 {
+   font-size: 2em;
+}
 p {
    font-size: 16px;
    line-height: 1.5em;
@@ -34,10 +37,13 @@ a {
 		@extend a;
 	}
 }
+img {
+   max-width: 100%;
+}
 
 #wrapper {
    min-height: 200vh;
-   margin-top: 75px;
+   margin-top: 25px;
 }
 
 
