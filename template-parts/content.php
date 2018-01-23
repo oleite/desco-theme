@@ -6,31 +6,29 @@ $featured = get_post_meta( get_the_ID(), 'desco_featured', TRUE ); //possíveis 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
    <header class="entry-header">
 
-      <a href="<?php the_permalink(); ?>"><h1 class="entry-title"><?php the_title(); ?></h1></a>
+      <?php if(has_post_thumbnail()): ?>
+         <div class="standard-featured">
+            <a href="<?php the_permalink(); ?>">
+               <?php the_post_thumbnail( 'thumbnail' ); ?>
+            </a>
+         </div>
+      <?php endif; ?>
 
-      <div class="entry-meta">
-         <?php echo desco_posted_meta(); ?>
-
-      </div>
    </header>
 
    <div class="entry-content">
 
-      <?php if(has_post_thumbnail()): ?>
-         <div class="standard-featured">
-            <?php the_post_thumbnail( 'thumbnail' ); ?>
-         </div>
-      <?php endif; ?>
+      <a href="<?php the_permalink(); ?>">
+         <h2 class="entry-title"><?php the_title(); ?></h2>
+      </a>
 
       <div class="entry-excerpt">
          <?php the_excerpt(); ?>
       </div>
 
+      <footer class="entry-footer">
+         <?php echo desco_posted_footer(); ?>
+      </footer>
    </div>
-
-   <footer class="entry-footer">
-      <?php echo desco_posted_footer(); ?>
-   </footer>
-
 
 </article>

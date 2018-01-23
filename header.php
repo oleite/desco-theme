@@ -16,8 +16,9 @@
 
 	<body <?php body_class(); ?>>
 
-
-		<i id="nox" class="fa fa-3x fa-lightbulb-o" aria-hidden="true"></i>
+		<?php if (! is_front_page()) : ?>
+			<i id="nox" class="fa fa-3x fa-lightbulb-o" aria-hidden="true"></i>
+		<?php endif; ?>
 
 		<div class="sidenav sidenav-closed">
 			<div class="sidenav-container">

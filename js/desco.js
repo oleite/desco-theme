@@ -40,7 +40,7 @@ jQuery(document).ready(function($) {
 
 
 //----- HIGHLIGHT TEXT -----//
-   $('#wrapper').on('click', 'p', function() {
+   $('.highlightable').on('click', 'p', function() {
       $(this).toggleClass('highlight');
    });
 

@@ -1,7 +1,9 @@
 #primary {
    padding: 0 100px;
+   margin: 0 auto;
 
    @include side-padding();
+   max-width: $max-width;
 }
 
 .container {
@@ -9,14 +11,21 @@
    grid-template-columns: auto;
    grid-gap: 10px 15px;
 
+   article {
+      display: flex;
+   }
 }
 
-.entry-content{
-   display: flex;
+.entry-title {
+   margin-top: 0;
+}
+.entry-content {
+   margin-left: 10px;
 }
 
-.standard-featured { //Aspect ratio - 5:8 (1:1.6)
-   min-width: 150px;
+.standard-featured { //Recommended aspect ratio - 5:8 (1:1.6)
+   width: 150px;
+   max-width: 30vw;
    height: auto;
 
    background-repeat: no-repeat;
