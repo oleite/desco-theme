@@ -45,8 +45,10 @@ nav#top-menu ul li.current-menu-item.nox { text-shadow: 0px 0px 10px #B20004, 0p
 
 .desco-profile-widget { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-align: center; -ms-flex-align: center; align-items: center; position: relative; }
 .desco-profile-widget img { border-radius: 50%; border: 2px solid #B20004; }
-.desco-profile-widget p { margin: 5px 0 5px 0; }
+.desco-profile-widget p { margin: 5px 0 0 0; }
 .desco-profile-widget i.fa { position: absolute; left: 50px; top: 45px; }
+.desco-profile-widget .login-button { background-color: #B20004; }
+.desco-profile-widget .logout-button { margin: 0; color: #999; }
 
 .widget_nav_menu ul { margin: 0; padding: 0; padding-left: 30px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
 .widget_nav_menu ul li { list-style: none; color: #888; }

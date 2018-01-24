@@ -11,12 +11,28 @@ jQuery(document).ready(function($) {
 
 
 //----- NOX -----//
+
+   var isNox = localStorage['nox'];
+
+   if (isNox == 'true') {
+     $('*').addClass('nox');
+   }
+
    $(document).on('click', '#nox', function() {
 
-         $('*').toggleClass('nox');
+      if (isNox == 'true') {
+         $('*').removeClass('nox');
+         localStorage['nox'] = 'false';
+         isNox = 'false';
+      } else {
+         $('*').addClass('nox');
+         localStorage['nox'] = 'true';
+         isNox = 'true';
+      }
 
       return false;
    });
+
    $(window).scroll(function(){
       var thresholdA = 30; //pixels before start
       var thresholdB = 100; //pixels in wich it will fade

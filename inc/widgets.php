@@ -22,7 +22,8 @@ class Desco_Profile_Widget extends WP_Widget {
 
       $current_user = wp_get_current_user();
       $profilePicURL = get_avatar_url($current_user->user_email);
-      $profilePicRedirect = get_site_url(null, '/wp-admin/profile.php');
+      $profilePicRedirect = get_edit_user_link();
+      $profilePicTitle = "Ir para configurações de perfil";
 
 
       echo $args['before_widget'];
@@ -30,14 +31,17 @@ class Desco_Profile_Widget extends WP_Widget {
          if ( ($current_user instanceof WP_User) ) {
 
 
-              echo '<a href="' . $profilePicRedirect  . '"><img src="' . $profilePicURL . '" /></a>';
+              echo '<a href="' . $profilePicRedirect  . '" title="'.$profilePicTitle.'"><img src="' . $profilePicURL . '" /></a>';
               echo '<p>Olá, <b>' . $current_user->display_name . '</b></p>' ;
-              echo '<a href="' . $profilePicRedirect  . '"><i class="fa fa-cog" aria-hidden="true"></i></a>';
-
+              echo '<a href="' . $profilePicRedirect . '" title="'.$profilePicTitle.'"><i class="fa fa-cog" aria-hidden="true"></i></a>';
+              echo '<a class="logout-button" href="' . wp_logout_url() . '" title="Fazer Log Out">[ sair ]</a>';
 
 
          }
+      } else {
+         echo '<a class"login-button" href="' . wp_login_url() . '" title="Fazer Log In"><h2>LOG IN</h2></a>';
       }
+
       echo $args['after_widget'];
 
    }
