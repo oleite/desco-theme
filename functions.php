@@ -4,19 +4,24 @@
 		ENQUEUE
 	====================
 */
-require get_template_directory() . '/inc/function-admin.php'; //Admin panel
-require get_template_directory() . '/inc/widgets.php';
+	require get_template_directory() . '/inc/function-admin.php'; //Admin panel
+	require get_template_directory() . '/inc/widgets.php';
 
-function desco_enqueue() {
-	wp_enqueue_script('jquery');
+	function desco_enqueue() {
+		wp_enqueue_script('jquery');
 
-	wp_enqueue_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+		wp_enqueue_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
-	wp_enqueue_style('generalstyle', get_template_directory_uri().'/css/desco.css', array(), false, 'all');
-	wp_enqueue_script('generaljs', get_template_directory_uri().'/js/desco.js', array(), false, true);
-}
-add_action('wp_enqueue_scripts', 'desco_enqueue');
+		wp_enqueue_style('generalstyle', get_template_directory_uri().'/css/desco.css', array(), false, 'all');
+		wp_enqueue_script('generaljs', get_template_directory_uri().'/js/desco.js', array(), false, true);
+	}
+	add_action('wp_enqueue_scripts', 'desco_enqueue');
 
+	function desco_login_stylesheet() {
+	    wp_enqueue_style( 'custom-login', get_template_directory_uri() . '/css/style-login.css' );
+	    //wp_enqueue_script( 'custom-login', get_stylesheet_directory_uri() . '/style-login.js' );
+	}
+	add_action( 'login_enqueue_scripts', 'desco_login_stylesheet' );
 // Google Fonts
 	function google_fonts() {
 

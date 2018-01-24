@@ -17,22 +17,20 @@ $featured = get_post_meta( get_the_ID(), 'desco_featured', TRUE ); //possíveis 
             <?php the_title(); ?>
          </h1>
          <span class="entry-author" >
-            por
-            <a class="author-link" href="<?php the_author_posts_link(); ?>">
-               <?php the_author(); ?>
-            </a>
+            Por <?php the_author_posts_link(); ?> |
+            <?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' atrás'; ?>
          </span>
 
       </span>
 
    </header>
-   <hr />
-   <div class="entry-content">
+
+   <div class="entry-content highlightable">
 
       <?php the_content(); ?>
 
    </div>
-   <hr />
+   
    <footer class="entry-footer">
 
          <?php echo get_avatar( get_the_author_meta( 'user_email' ), '50' ); ?>

@@ -1,5 +1,26 @@
 <?php
 
+	//Default admin panel color palette
+	function set_default_admin_color($user_id) {
+	    $args = array(
+	        'ID' => $user_id,
+	        'admin_color' => 'midnight'
+	    );
+	    wp_update_user( $args );
+	}
+
+	add_action('user_register', 'set_default_admin_color');
+	if ( !current_user_can('manage_options') ) {
+
+		remove_action( 'admin_color_scheme_picker', 'admin_color_scheme_picker' );
+
+	}
+	function desco_loginlogo_url($url) {
+		 return get_site_url();
+	}
+	add_filter( 'login_headerurl', 'desco_loginlogo_url' );
+
+	show_admin_bar(false);
 
 /*
 	====================

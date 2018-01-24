@@ -1,0 +1,65 @@
+@import 'variables'; //Variáveis globais
+
+body.login {
+   background-image: url('../img/bg-img-2.png');
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+
+   label {
+      color: $white1;
+   }
+   .message {
+      border-left: 4px solid $primary-color;
+   }
+
+   form {
+      background: none;
+
+      input {
+         &:focus {
+            border-color: $primary-color;
+            box-shadow: 0 0 2px rgba($primary-color, 0.8);
+         }
+
+         &[type=checkbox]:checked:before {
+            color: $primary-color;
+         }
+         &[type=submit] {
+             background: $primary-color;
+             border-color: $primary-color $primary-darker $primary-darker;
+             box-shadow: 0 1px 0 $primary-darker;
+             color: #fff;
+             text-decoration: none;
+             text-shadow: 0 -1px 1px $primary-darker, 1px 0 1px $primary-darker, 0 1px 1px $primary-darker, -1px 0 1px $primary-darker;
+            &:hover {
+               background: $primary-darker;
+               border-color: $primary-color;
+               color: #fff;
+            }
+         }
+      }
+   }
+   #nav a {
+      color: $primary-color;
+
+      &:hover {
+         color: $primary-darker;
+      }
+   }
+   #backtoblog a {
+      font-size: 16px;
+      color: white;
+
+      &:hover {
+         color: $primary-color;
+      }
+   }
+}
+body.login div#login h1 a {
+   width: auto;
+   margin: 0 0 20px 0;
+
+   background-image: url('../img/desco_ext_smaller_spread.svg');
+   background-size: 100%;
+}

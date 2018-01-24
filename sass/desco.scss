@@ -5,7 +5,6 @@
 @import 'widgets'; //custom widgets
 @import 'posts'; //posts styling
 
-
 body, html {
    background: $white1;
    padding: 0;
@@ -25,9 +24,6 @@ p {
    line-height: 1.5em;
    &.nox {
       color: $white1;
-   }
-   &.highlight {
-      background-color: rgba(250,250,0,0.075);
    }
 }
 a {
@@ -82,4 +78,8 @@ img {
    &.nox {
       box-shadow: 0 0 20px $primary-color;
    }
+}
+
+.highlight {
+   background-color: rgba(255, 131, 73, 0.08);
 }
