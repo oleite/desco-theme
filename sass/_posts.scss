@@ -1,3 +1,14 @@
+@mixin jumbotron {
+   background-color: hsla(0, 0%, 98%, 1);
+   border: 1px solid #eee;
+
+   &.nox {
+      background-color: hsla(300, 5%, 5%, 1);
+      border: 1px solid #111;
+   }
+}
+
+
 #main {
    padding: 0 100px;
    margin: 0 auto;
@@ -27,7 +38,6 @@
       color: #ce1e22;
    }
 }
-
 .entry-author {
    color: #777;
    a {
@@ -38,9 +48,17 @@
       }
    }
 }
+.entry-content {
+   width: 100%;
+
+   &.nox {
+      color: $white1;
+   }
+}
 
 //Home only
-.home {
+.home,
+.author {
    #main {
       margin-top: 75px;
    }
@@ -61,14 +79,8 @@
    }
 
    .entry-content {
-      background-color: hsla(0, 0%, 98%, 1);
-      border: 1px solid #eee;
+      @include jumbotron;
       padding: 10px;
-
-      &.nox {
-         background-color: hsla(300, 5%, 5%, 1);
-         border: 1px solid #111;
-      }
    }
 
    .standard-featured {
@@ -89,6 +101,18 @@
       }
    }
 
+   .author-title {
+      width: 100%;
+      margin: 0 0 50px 0;
+      @include jumbotron;
+      border-left: 10px solid $primary-color;
+      padding-left: 10px;
+
+      &.nox {
+         color: $white1;
+         border-left: 10px solid $primary-darker;
+      }
+   }
 }
 
 //Single-posts only
@@ -99,16 +123,14 @@
       flex-direction: column;
       align-items: center;
 
-      background-color: $base2;
-      border: 1px solid #111;
-      padding: 5px;
+      margin-bottom: 75px;
+
+      @include jumbotron;
 
       text-align: center;
-      &.nox {
-
-      }
 
       .standard-featured {
+         max-height: 480px;
          max-width: 65vw;
          width: 300px;
          flex-shrink: 0;
@@ -118,9 +140,6 @@
          .entry-title {
             margin-top: 10px;
             margin-bottom: 0;
-         }
-         .entry-author a {
-            color: #aaa;
          }
       }
    }

@@ -1,8 +1,3 @@
-<?php
-
-$featured = get_post_meta( get_the_ID(), 'desco_featured', TRUE ); //possíveis valores: none, primary, secondary
-
-?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
    <header class="entry-header">
 
@@ -14,7 +9,10 @@ $featured = get_post_meta( get_the_ID(), 'desco_featured', TRUE ); //possíveis 
 
       <span class="entry-headercontent">
          <h1 class="entry-title">
-            <?php the_title(); ?>
+            <?php
+               the_title();
+               edit_post_link( __( 'Editar', 'textdomain' ), '<p>', '</p>', null, 'btn btn-primary btn-edit-post-link' );
+            ?>
          </h1>
       </span>
 

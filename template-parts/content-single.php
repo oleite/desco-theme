@@ -3,7 +3,7 @@
 $featured = get_post_meta( get_the_ID(), 'desco_featured', TRUE ); //possíveis valores: none, primary, secondary
 
 ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('content-single'); ?>>
    <header class="entry-header">
 
       <?php if(has_post_thumbnail()): ?>
@@ -14,7 +14,10 @@ $featured = get_post_meta( get_the_ID(), 'desco_featured', TRUE ); //possíveis 
 
       <span class="entry-headercontent">
          <h1 class="entry-title">
-            <?php the_title(); ?>
+            <?php
+               the_title();
+               edit_post_link( __( 'Editar', 'textdomain' ), '<p>', '</p>', null, 'btn btn-primary btn-edit-post-link' );
+            ?>
          </h1>
          <span class="entry-author" >
             Por <?php the_author_posts_link(); ?> |
@@ -30,7 +33,7 @@ $featured = get_post_meta( get_the_ID(), 'desco_featured', TRUE ); //possíveis 
       <?php the_content(); ?>
 
    </div>
-   
+
    <footer class="entry-footer">
 
          <?php echo get_avatar( get_the_author_meta( 'user_email' ), '50' ); ?>

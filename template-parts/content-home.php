@@ -3,7 +3,7 @@
 $featured = get_post_meta( get_the_ID(), 'desco_featured', TRUE ); //possíveis valores: none, primary, secondary
 
 ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class('entry'); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('content-home'); ?>>
    <header class="entry-header">
 
       <?php if(has_post_thumbnail()): ?>
@@ -23,10 +23,13 @@ $featured = get_post_meta( get_the_ID(), 'desco_featured', TRUE ); //possíveis 
             <?php the_title(); ?>
          </a>
       </h2>
-      <span class="entry-author" >
-         Por <?php the_author_posts_link(); ?> |
-         <?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' atrás'; ?>
-      </span>
+
+      <?php if(!is_author()): ?>
+         <span class="entry-author" >
+            Por <?php the_author_posts_link(); ?> |
+            <?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' atrás'; ?>
+         </span>
+      <?php endif; ?>
 
       <div class="entry-excerpt">
          <?php the_excerpt(); ?>
