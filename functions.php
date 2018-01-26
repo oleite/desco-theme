@@ -67,11 +67,28 @@
 	====================
 */
 
-	function desco_posted_meta() {
+	function desco_posted_date() {
 		$posted_on = human_time_diff( get_the_time('U') , current_time('timestamp') );
 
-		return '<span class="posted-on">Postado ' . $posted_on . ' atrás</span>';
+		return '<span class="posted-on"><a href="' . esc_url(get_permalink()) . '">' . $posted_on . ' atrás</a></span>';
 	}
-	function desco_posted_footer() {
-		return 'tags list and comment link';
+	
+	function desco_posted_tags() {
+		$tags = get_the_tag_list( '<div class="tag-list">', '', '</div>');
+
+		return $tags;
+	}
+
+	function desco_posted_comments_number() {
+		$comments = get_comments_number();
+
+		if ($comments > 0){
+			$output = '<span class="comments-number">' . $comments . ' <i class="fa fa-comments-o" aria-hidden="true"></i></span>';
+		}
+
+		return $output;
+	}
+
+	function desco_edit_post_button() {
+		edit_post_link( __( '[editar]', 'textdomain' ), '<span>', '</span>', null, 'edit-post-btn' );
 	}

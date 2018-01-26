@@ -27,7 +27,7 @@ $featured = get_post_meta( get_the_ID(), 'desco_featured', TRUE ); //possíveis 
       <?php if(!is_author()): ?>
          <span class="entry-author" >
             Por <?php the_author_posts_link(); ?> |
-            <?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' atrás'; ?>
+            em <?php the_category(', '); ?>
          </span>
       <?php endif; ?>
 
@@ -36,7 +36,10 @@ $featured = get_post_meta( get_the_ID(), 'desco_featured', TRUE ); //possíveis 
       </div>
 
       <footer class="entry-footer">
-         <?php echo desco_posted_footer(); ?>
+         <?php
+            echo desco_posted_date();
+            echo desco_posted_comments_number();
+         ?>
       </footer>
    </div>
 

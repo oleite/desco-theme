@@ -11,20 +11,20 @@ $featured = get_post_meta( get_the_ID(), 'desco_featured', TRUE ); //possíveis 
                <?php the_post_thumbnail( 'thumbnail' ); ?>
          </div>
       <?php endif; ?>
-
       <span class="entry-headercontent">
          <h1 class="entry-title">
-            <?php
-               the_title();
-               edit_post_link( __( 'Editar', 'textdomain' ), '<p>', '</p>', null, 'btn btn-primary btn-edit-post-link' );
-            ?>
+            <?php the_title(); ?>
          </h1>
          <span class="entry-author" >
             Por <?php the_author_posts_link(); ?> |
-            <?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' atrás'; ?>
+            em <?php the_category(', '); ?>
          </span>
 
+         <?php echo desco_posted_tags(); ?>
+
       </span>
+
+      <?php desco_edit_post_button(); ?>
 
    </header>
 
@@ -36,7 +36,7 @@ $featured = get_post_meta( get_the_ID(), 'desco_featured', TRUE ); //possíveis 
 
    <footer class="entry-footer">
 
-         <?php echo get_avatar( get_the_author_meta( 'user_email' ), '50' ); ?>
+         <?php //echo get_avatar( get_the_author_meta( 'user_email' ), '50' ); ?>
 
    </footer>
 
