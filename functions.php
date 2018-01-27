@@ -6,6 +6,7 @@
 */
 	require get_template_directory() . '/inc/function-admin.php'; //Admin panel
 	require get_template_directory() . '/inc/widgets.php';
+	require get_template_directory() . '/inc/ajax.php';
 
 	function desco_enqueue() {
 		wp_enqueue_script('jquery');

@@ -56,11 +56,44 @@ jQuery(document).ready(function($) {
 
 
 //----- HIGHLIGHT TEXT -----//
-   $('.highlightable').on('click', 'p', function() {
+   $('.js-highlightable').on('click', 'p', function() {
       $(this).toggleClass('highlight');
    });
 
 
+//----- POSTS LOADING AJAX FUNCTIONS -----//
+   $(document).on('click', '.js-load-more', function() {
+
+      $('.js-icon-loading').toggleClass('icon-loading');
+
+      var that = $(this);
+      var page = that.data('page');
+      var newPage = page + 1;
+      var ajaxurl = $(this).data('url');
+
+
+      $.ajax({
+
+         url : ajaxurl,
+         type : 'post',
+         data : {
+            page : page,
+            action : 'desco_load_more'
+         },
+         error : function( response ){
+            console.log(response);
+            $('.js-icon-loading').toggleClass('icon-loading');
+         },
+         success : function( response ) {
+
+            that.data('page', newPage);
+            $('.js-posts-container').append( response );
+            $('.js-icon-loading').toggleClass('icon-loading');
+
+         }
+
+      });
+   });
 
 
 });

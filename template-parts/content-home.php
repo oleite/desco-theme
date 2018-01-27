@@ -3,7 +3,7 @@
 $featured = get_post_meta( get_the_ID(), 'desco_featured', TRUE ); //possíveis valores: none, primary, secondary
 
 ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class('content-home'); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('content-home post'); ?>>
    <header class="entry-header">
 
       <?php if(has_post_thumbnail()): ?>

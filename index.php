@@ -5,7 +5,7 @@
 
 
 
-         <div class="container post-grid">
+         <div class="container post-grid js-posts-container">
 
             <?php if ( have_posts() ):
 
@@ -22,7 +22,9 @@
          </div><!-- .container -->
 
          <div class="load-more">
-            <a><i class="fa fa-spinner" aria-hidden="true"></i> Carregar Mais</a>
+            <a class="js-load-more" data-page="1" data-url="<?php echo admin_url('admin-ajax.php'); ?>">
+               <i class="fa fa-spinner js-icon-loading" aria-hidden="true"></i> Carregar Mais
+            </a>
          </div>
 
       </main>

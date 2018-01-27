@@ -32,7 +32,7 @@ $featured = get_post_meta( get_the_ID(), 'desco_featured', TRUE ); //possíveis 
 
    </header>
 
-   <div class="entry-content highlightable">
+   <div class="entry-content js-highlightable">
 
       <?php the_content(); ?>
 
