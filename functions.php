@@ -72,7 +72,7 @@
 
 		return '<span class="posted-on"><a href="' . esc_url(get_permalink()) . '">' . $posted_on . ' atrás</a></span>';
 	}
-	
+
 	function desco_posted_tags() {
 		$tags = get_the_tag_list( '<div class="tag-list">', '', '</div>');
 

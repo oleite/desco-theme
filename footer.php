@@ -1,8 +1,8 @@
 
       </div> <!-- wrapper -->
 
-      <footer>
-
+      <footer class="desco-footer">
+         Em desenvolvimento
       </footer>
 
       <?php wp_footer(); ?>

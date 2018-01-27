@@ -43,6 +43,18 @@ img {
    margin-top: 25px;
 }
 
+footer.desco-footer {
+   text-align: center;
+   background-color: $primary-darker;
+   color: $white1;
+   padding: 30px;
+
+   &.nox {
+      background-color: #1b0606;
+      box-shadow: 0 -0.5px 0 $primary-color, inset 0px 9px 15px -9px #B20004;
+   }
+}
+
 
 //--- Botão 'Acender a luz' ---//
 #nox {

@@ -20,7 +20,11 @@ $featured = get_post_meta( get_the_ID(), 'desco_featured', TRUE ); //possíveis 
             em <?php the_category(', '); ?>
          </span>
 
-         <?php echo desco_posted_tags(); ?>
+         <div>
+            <br />
+            Tags:
+            <?php echo desco_posted_tags(); ?>
+         </div>
 
       </span>
 
