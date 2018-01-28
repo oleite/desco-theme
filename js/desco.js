@@ -33,27 +33,31 @@ jQuery(document).ready(function($) {
       return false;
    });
 
-   $(window).scroll(function(){
-      var thresholdA = 30; //pixels before start
-      var thresholdB = 100; //pixels in wich it will fade
+   if ($(window).width() < 800) {
+      $(window).scroll(function(){
+         var thresholdA = 30; //pixels before start
+         var thresholdB = 100; //pixels in wich it will fade
 
-      var op = ($(window).scrollTop() - thresholdA) / thresholdB;
+         var op = ($(window).scrollTop() - thresholdA) / thresholdB;
 
-      if( op <= 0 ){
-         $("#nox").hide();
-      } else {
-      	$("#nox").show();
-      }
+         if( op <= 0 ){
+            $("#nox").hide();
+         } else {
+         	$("#nox").show();
+         }
 
-      if(op >= 1){
-         op = 1;
-      } else if (op <= 0) {
-         op = 0;
-      }
+         if(op >= 1){
+            op = 1;
+         } else if (op <= 0) {
+            op = 0;
+         }
 
-      $("#nox").css("opacity", op );
-   });
-
+         $("#nox").css("opacity", op );
+      });
+} else {
+   $("#nox").css("z-index", 4);
+   $("#nox").css("opacity", 1);
+}
 
 //----- HIGHLIGHT TEXT -----//
    $('.js-highlightable').on('click', 'p', function() {

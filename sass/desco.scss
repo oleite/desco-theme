@@ -4,6 +4,7 @@
 @import 'sidenav'; //barra lateral esquerda
 @import 'widgets'; //custom widgets
 @import 'posts'; //posts styling
+@import 'buddypress'; //buddypress stuff styling
 
 body, html {
    background: $white1;
@@ -38,7 +39,7 @@ img {
 }
 
 #wrapper {
-   min-height: calc(100vh - 200px);
+   min-height: calc(100vh - 199px);
    margin-top: 25px;
 }
 
