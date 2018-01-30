@@ -116,3 +116,57 @@
       }
    }
 }
+
+
+
+.searchform div {
+   position: relative;
+   margin: 20px 0;
+
+   input[type="text"] {
+      box-sizing: border-box;
+      width: 500px;
+      max-width: 100%;
+
+      font-family: inherit;
+      font-size: 25px;
+      color: $primary-darker;
+      outline: none;
+
+      padding: 5px;
+      padding-left: 50px;
+      border: none;
+      box-shadow: 0 1.5px 3px 0px rgba(0,0,0,0.2);
+
+      &.nox {
+         background-color: #1e1f25;
+         color: $white1;
+         box-shadow: 0 1px 0 $primary-darker;
+      }
+   }
+   button[type="submit"] {
+      color: #555;
+      width: 40px;
+      top: 0;
+      bottom: 0;
+      position: absolute;
+      background-color: hsla(0, 0%, 95%, 1);
+      cursor: pointer;
+
+      border: none;
+
+      &:hover {
+         color: $primary-darker;
+         background-color: transparent;
+      }
+
+      &.nox {
+         background-color: $primary-darker;
+         color: $white1;
+         &:hover {
+            color: $primary-color;
+         }
+      }
+   }
+
+}

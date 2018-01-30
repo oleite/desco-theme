@@ -93,3 +93,22 @@
 	function desco_edit_post_button() {
 		edit_post_link( __( '[editar]', 'textdomain' ), '<span>', '</span>', null, 'edit-post-btn' );
 	}
+
+//
+
+	function desco_search_form( $form ) {
+	    $form = '
+			<form role="search" method="get" id="searchform" class="searchform" action="' . home_url( '/' ) . '" >
+				<div>
+					<button type="submit" id="searchsubmit">
+						<i class="fa fa-search" aria-hidden="true"></i>
+					</button>
+					<input type="text" value="' . get_search_query() . '" name="s" id="s" />
+				</div>
+			</form>
+		 ';
+
+	    return $form;
+	}
+
+	add_filter( 'get_search_form', 'desco_search_form', 100 );

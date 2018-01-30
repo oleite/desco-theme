@@ -6,7 +6,7 @@
 <div id="primary" class="content-area">
       <main id="main" class="site-main" role="main">
 
-         <h1 class="author-title">Posts com a categoria <i><?php single_cat_title(); ?></i></h1>
+         <h1 class="author-title"><?php single_cat_title(); ?></h1>
 
          <div class="container post-grid">
 

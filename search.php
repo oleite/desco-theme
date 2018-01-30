@@ -1,13 +1,14 @@
 <?php
    get_header();
 
-   $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : get_userdata(intval($author));
 ?>
 
 <div id="primary" class="content-area">
       <main id="main" class="site-main" role="main">
 
-         <h1 class="author-title">Posts de <?php echo $curauth->nickname; ?></h1>
+         <h1 class="author-title">Resultados da pesquisa por "<?php echo get_search_query(); ?>"</h1>
+         <?php the_widget('WP_Widget_Search', $instance = array(), $args = array() ) ?>
+
 
          <div class="container post-grid">
 
