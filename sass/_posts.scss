@@ -1,6 +1,7 @@
-@mixin jumbotron {
+%jumbotron {
    background-color: hsla(0, 0%, 98%, 1);
    border: 1px solid #eee;
+   transition: all 0.15s ease-in-out;
 
    &.nox {
       background-color: hsla(300, 5%, 5%, 1);
@@ -92,22 +93,31 @@
    a {
       display: inline-block;
       padding: 5px 10px 5px 10px;
-      border-radius: 10px;
+      cursor: pointer;
+      opacity: 0.5;
 
-      background: $primary-color;
-      border: 1px solid;
-      border-color: $primary-color $primary-darker $primary-darker;
-      box-shadow: 0 1px 0 $primary-darker;
-      color: $white1;
-      text-decoration: none;
-      text-shadow: 0 -1px 1px $primary-darker, 1px 0 1px $primary-darker, 0 1px 1px $primary-darker, -1px 0 1px $primary-darker;
+      font-size: 30px;
+      font-weight: bold;
 
-      &:hover {
-         cursor: pointer;
+      transition: all 100ms ease;
 
+      &:hover,
+      &:focus,
+      &.loading {
+         opacity: 1;
          transform: translateY(-1px);
-         color: #fff;
       }
+      &.loading {
+         cursor: default;
+      }
+
+      &.nox {
+         color: $white1;
+      }
+   }
+
+   span {
+      display: block;
    }
 }
 
@@ -183,6 +193,7 @@
    }
 
    .container {
+
       display: grid;
       grid-template-columns: auto;
       grid-gap: 10px 15px;
@@ -198,7 +209,7 @@
    }
 
    .entry-content {
-      @include jumbotron;
+      @extend %jumbotron;
       padding: 10px;
    }
 
@@ -223,7 +234,7 @@
    .author-title {
       width: 100%;
       margin: 0 0 50px 0;
-      @include jumbotron;
+      @extend %jumbotron;
       border-left: 10px solid $primary-color;
       padding-left: 10px;
 
@@ -244,7 +255,7 @@
 
       margin-bottom: 75px;
 
-      @include jumbotron;
+      @extend %jumbotron;
 
       text-align: center;
 

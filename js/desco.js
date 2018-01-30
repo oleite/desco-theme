@@ -66,15 +66,19 @@ jQuery(document).ready(function($) {
 
 
 //----- POSTS LOADING AJAX FUNCTIONS -----//
-   $(document).on('click', '.js-load-more', function() {
-
-      $('.js-icon-loading').toggleClass('icon-loading');
+   $(document).on('click', '.js-load-more:not(.loading)', function() {
+      function loading_icon_switch() {
+         $('.js-icon-loading').toggleClass('icon-loading');
+         $('.js-icon-loading').toggleClass('fa-spinner fa-chevron-down');
+      }
 
       var that = $(this);
       var page = that.data('page');
       var newPage = page + 1;
       var ajaxurl = $(this).data('url');
 
+      loading_icon_switch();
+      that.addClass('loading');
 
       $.ajax({
 
@@ -86,18 +90,30 @@ jQuery(document).ready(function($) {
          },
          error : function( response ){
             console.log(response);
-            $('.js-icon-loading').toggleClass('icon-loading');
          },
          success : function( response ) {
 
             that.data('page', newPage);
             $('.js-posts-container').append( response );
-            $('.js-icon-loading').toggleClass('icon-loading');
+            loading_icon_switch();
+            that.removeClass('loading');
 
+            if (localStorage['nox'] == 'true') {
+               $('.js-posts-container *').addClass('nox');
+            }
          }
 
       });
    });
+
+//
+
+$(".fade-in").each(function(index){
+      var s = 0.1;
+     $(this).css({
+          'animation-delay' : s*(1+index) + 's'
+     });
+ });
 
 
 });

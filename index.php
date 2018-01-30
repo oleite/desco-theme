@@ -23,7 +23,8 @@
 
          <div class="load-more">
             <a class="js-load-more" data-page="1" data-url="<?php echo admin_url('admin-ajax.php'); ?>">
-               <i class="fa fa-spinner js-icon-loading" aria-hidden="true"></i> Carregar Mais
+               <span>Carregar Mais</span>
+               <i class="fa fa-chevron-down js-icon-loading" aria-hidden="true"></i>
             </a>
          </div>
 
