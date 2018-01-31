@@ -1,9 +1,9 @@
-%jumbotron {
+.jumbotron {
    background-color: hsla(0, 0%, 98%, 1);
    border: 1px solid #eee;
    transition: all 0.15s ease-in-out;
 
-   &.nox {
+   .nox & {
       background-color: hsla(300, 5%, 5%, 1);
       border: 1px solid #111;
    }
@@ -53,7 +53,7 @@
          color: #777;
       }
 
-      &.nox {
+      .nox & {
          color: #aaa;
 
          &:hover,
@@ -79,7 +79,7 @@
 .entry-content {
    width: 100%;
 
-   &.nox {
+   .nox & {
       color: $white1;
    }
 }
@@ -111,7 +111,7 @@
          cursor: default;
       }
 
-      &.nox {
+      .nox & {
          color: $white1;
       }
    }
@@ -145,7 +145,7 @@
       }
    }
 
-   &.nox {
+   .nox & {
       a {
          display: inline-block;
          //background-color: rgba(21, 26, 36, 0.8);
@@ -210,7 +210,6 @@
    }
 
    .entry-content {
-      @extend %jumbotron;
       padding: 10px;
    }
 
@@ -235,11 +234,11 @@
    .author-title {
       width: 100%;
       margin: 0 0 50px 0;
-      @extend %jumbotron;
+
       border-left: 10px solid $primary-color;
       padding-left: 10px;
 
-      &.nox {
+      .nox & {
          color: $white1;
          border-left: 10px solid $primary-darker;
       }
@@ -255,8 +254,6 @@
       align-items: center;
 
       margin-bottom: 75px;
-
-      @extend %jumbotron;
 
       text-align: center;
 

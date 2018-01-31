@@ -13,19 +13,21 @@ jQuery(document).ready(function($) {
 //----- NOX -----//
 
    var isNox = localStorage['nox'];
+   var noxSelector = 'body';
 
    if (isNox == 'true') {
-     $('*').addClass('nox');
+     $(noxSelector).addClass('nox');
    }
 
+   //Nox button
    $(document).on('click', '#nox', function() {
 
       if (isNox == 'true') {
-         $('*').removeClass('nox');
+         $(noxSelector).removeClass('nox');
          localStorage['nox'] = 'false';
          isNox = 'false';
       } else {
-         $('*').addClass('nox');
+         $(noxSelector).addClass('nox');
          localStorage['nox'] = 'true';
          isNox = 'true';
       }
@@ -33,6 +35,7 @@ jQuery(document).ready(function($) {
       return false;
    });
 
+   //Nox button appearance
    if ($(window).width() < 800) {
       $(window).scroll(function(){
          var thresholdA = 30; //pixels before start
@@ -54,10 +57,10 @@ jQuery(document).ready(function($) {
 
          $("#nox").css("opacity", op );
       });
-} else {
-   $("#nox").css("z-index", 4);
-   $("#nox").css("opacity", 1);
-}
+   } else {
+      $("#nox").css("z-index", 4);
+      $("#nox").css("opacity", 1);
+   }
 
 //----- HIGHLIGHT TEXT -----//
    $('.js-highlightable').on('click', 'p', function() {

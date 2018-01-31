@@ -4,7 +4,7 @@ $featured = get_post_meta( get_the_ID(), 'desco_featured', TRUE ); //possíveis 
 
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class('content-single'); ?>>
-   <header class="entry-header">
+   <header class="entry-header jumbotron">
 
       <?php if(has_post_thumbnail()): ?>
          <div class="standard-featured">

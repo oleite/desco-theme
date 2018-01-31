@@ -29,7 +29,7 @@ $sidenav-width: 280px;
       box-shadow: 0 0 0 !important;
    }
 
-   &.nox {
+   .nox & {
       box-shadow: 0.5px 0 0 $primary-color, 10px 0 300px black;
    }
 }
@@ -84,7 +84,7 @@ $sidenav-width: 280px;
       cursor: pointer;
       filter: drop-shadow(0 1px 0 $base2);
    }
-   &.nox {
+   .nox & {
       filter: drop-shadow(0 0 5px $primary-color);
    }
    &.sidenav-opened {

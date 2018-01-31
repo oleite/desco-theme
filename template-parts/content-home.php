@@ -16,7 +16,7 @@ $featured = get_post_meta( get_the_ID(), 'desco_featured', TRUE ); //possíveis 
 
    </header>
 
-   <div class="entry-content">
+   <div class="entry-content jumbotron">
 
       <h2 class="entry-title">
          <a href="<?php the_permalink(); ?>">
