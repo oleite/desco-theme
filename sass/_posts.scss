@@ -178,7 +178,19 @@
     to   {-webkit-transform: rotate(359deg);}
 }
 
+.author-title {
+   box-sizing: border-box;
+   width: 100%;
+   margin: 0 0 50px 0;
 
+   border-left: 10px solid $primary-color;
+   padding-left: 10px;
+
+   .nox & {
+      color: $white1;
+      border-left: 10px solid $primary-darker;
+   }
+}
 
 
 
@@ -230,19 +242,6 @@
          grid-template-columns: auto auto;
       }
    }
-
-   .author-title {
-      width: 100%;
-      margin: 0 0 50px 0;
-
-      border-left: 10px solid $primary-color;
-      padding-left: 10px;
-
-      .nox & {
-         color: $white1;
-         border-left: 10px solid $primary-darker;
-      }
-   }
 }
 
 /* --- Single posts only --- */
@@ -269,9 +268,18 @@
             margin-top: 10px;
             margin-bottom: 0;
          }
-
-         .tag-list {
-            margin-top: 10px;
+         .entry-tags {
+            margin-top: 50px;
+            p {
+               color: #aaa;
+               margin: 0;
+               text-align: left;
+               font-size: 14px;
+               margin-left: 10px;
+            }
+            .tag-list {
+               margin-top: 5px;
+            }
          }
       }
    }
@@ -285,4 +293,23 @@
          text-align: left;
       }
    }
+}
+
+
+
+.badge {
+   &.badge-age {
+      display: inline-block;
+      padding: 0 3px 0 2px;
+      border-radius: 3px 7px;
+      color: $white1;
+
+      &.badge-age-18 {
+         background-color: $base1;
+      }
+      &.badge-age-16 {
+         background-color: $primary-darker;
+      }
+   }
+
 }

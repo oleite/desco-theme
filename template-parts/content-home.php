@@ -37,6 +37,7 @@ $featured = get_post_meta( get_the_ID(), 'desco_featured', TRUE ); //possíveis 
 
       <footer class="entry-footer">
          <?php
+            echo desco_posted_badges('<p style="text-align: right">' , ' ' , '</p>');
             echo desco_posted_date();
             echo desco_posted_comments_number();
          ?>

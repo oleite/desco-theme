@@ -90,9 +90,24 @@
 		return $output;
 	}
 
+	function desco_posted_badges($before = '', $separador = ' ', $after = '')	{
+		$output = $before;
+
+		if (has_tag('18')) {
+			$output .= '<span class="badge badge-age badge-age-18">18+</span>' . $separador;
+		}
+		if (has_tag('16')) {
+			$output .= '<span class="badge badge-age badge-age-16">16+</span>' . $separador;
+		}
+
+		return $output . $after;
+	}
+
 	function desco_edit_post_button() {
 		edit_post_link( __( '[editar]', 'textdomain' ), '<span>', '</span>', null, 'edit-post-btn' );
 	}
+
+
 
 //
 
