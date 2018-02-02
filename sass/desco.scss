@@ -34,6 +34,19 @@ body, html {
    	border-radius: 0px;
    }
 }
+.header-container,
+#wrapper,
+.desco-footer,
+.header-tools {
+   transition: filter 0.25s ease;
+   .page-overlay & {
+      backface-visibility: hidden;
+      perspective: 1000;
+      transform: translate3d(0,0,0);
+      transform: translateZ(0);
+      filter: blur(2px) grayscale(0.8);
+   }
+}
 h1 {
    font-size: 2em;
 }

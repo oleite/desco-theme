@@ -16,20 +16,21 @@
 
 	<body <?php body_class(); ?>>
 
-
-		<i id="nox" class="fa fa-3x fa-lightbulb-o" aria-hidden="true"></i>
+		<div class="header-tools">
+			<i id="nox" class="fa fa-3x fa-lightbulb-o" aria-hidden="true"></i>
+			<a class="sidenav-close">
+				<i class="fa fa-times" aria-hidden="true"></i>
+			</a>
+		</div>
 
 		<div id="page-overlay" class="fade-in-2"></div>
 
 		<div class="sidenav sidenav-closed nox">
 			<div class="sidenav-scroll fade-in-2">
-				<a class="sidenav-close">
-					<i class="fa fa-times" aria-hidden="true"></i>
-				</a>
 				<div class="sidenav-container">
 
 					<?php get_sidebar(); ?>
-					
+
 				</div>
 			</div>
 		</div>
