@@ -64,3 +64,14 @@ $max-width: 1200px; //content max-width
     animation-fill-mode: forwards;
     animation-duration: 0.5s;
 }
+
+.jumbotron {
+   background-color: hsla(0, 0%, 98%, 1);
+   border: 1px solid #eee;
+   transition: all 0.15s ease-in-out;
+
+   .nox & {
+      background-color: hsla(300, 5%, 5%, 1);
+      border: 1px solid #111;
+   }
+}

@@ -21,8 +21,10 @@ class Desco_Profile_Widget extends WP_Widget {
    public function widget( $args, $instance) {
 
       $current_user = wp_get_current_user();
+      $current_user_name =  bp_get_displayed_user_fullname();
       $profilePicURL = get_avatar_url($current_user->user_email);
-      $profilePicRedirect = get_edit_user_link();
+      $profilePicRedirect = bp_loggedin_user_domain();
+      $profileSettingsRedirect = get_edit_user_link();
       $profilePicTitle = "Ir para configurações de perfil";
 
 
@@ -32,8 +34,8 @@ class Desco_Profile_Widget extends WP_Widget {
 
 
               echo '<a href="' . $profilePicRedirect  . '" title="'.$profilePicTitle.'"><img src="' . $profilePicURL . '" /></a>';
-              echo '<p>Olá, <b>' . $current_user->display_name . '</b></p>' ;
-              echo '<a href="' . $profilePicRedirect . '" title="'.$profilePicTitle.'"><i class="fa fa-cog" aria-hidden="true"></i></a>';
+              echo '<p>Olá, <b>' . $current_user_name . '</b></p>' ;
+              echo '<a href="' . $profileSettingsRedirect . '" title="'.$profilePicTitle.'"><i class="fa fa-cog" aria-hidden="true"></i></a>';
               echo '<a class="logout-button" href="' . wp_logout_url() . '" title="Fazer Log Out">[ sair ]</a>';
 
 

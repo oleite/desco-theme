@@ -1,0 +1,33 @@
+@-webkit-keyframes spin { from { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+  to { -webkit-transform: rotate(360deg); transform: rotate(360deg); } }
+@keyframes spin { from { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+  to { -webkit-transform: rotate(360deg); transform: rotate(360deg); } }
+@-webkit-keyframes fadeIn { from { opacity: 0; }
+  to { opacity: 1; } }
+@keyframes fadeIn { from { opacity: 0; }
+  to { opacity: 1; } }
+.fade-in { opacity: 0; /* make things invisible upon start */ -webkit-animation: fadeIn ease 1; animation: fadeIn ease 1; /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */ -webkit-animation-fill-mode: forwards; animation-fill-mode: forwards; /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/ -webkit-animation-duration: 0.5s; animation-duration: 0.5s; }
+
+.fade-in-2 { opacity: 0; -webkit-animation: fadeIn ease 1; animation: fadeIn ease 1; -webkit-animation-fill-mode: forwards; animation-fill-mode: forwards; -webkit-animation-duration: 0.5s; animation-duration: 0.5s; }
+
+.jumbotron, #buddypress #item-header { background-color: #fafafa; border: 1px solid #eee; -webkit-transition: all 0.15s ease-in-out; transition: all 0.15s ease-in-out; }
+.nox .jumbotron, .nox #buddypress #item-header, #buddypress .nox #item-header { background-color: #0d0c0d; border: 1px solid #111; }
+
+#buddypress h2 { color: #B20004; }
+#buddypress ul li { list-style: none; }
+#buddypress #item-header { display: -webkit-box; display: -ms-flexbox; display: flex; padding: 10px; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+#buddypress #item-header #item-header-avatar { max-width: 33vw; margin-right: 10px; }
+#buddypress #item-header #item-header-avatar img.avatar { height: auto; margin: 0; border-radius: 50%; border: 2px solid #B20004; }
+#buddypress #item-header #item-header-content { min-width: 100px; -webkit-box-flex: 1; -ms-flex: 1; flex: 1; }
+#buddypress #item-header #item-header-content h2 { font-size: 32px; }
+#buddypress #item-header #item-nav { -ms-flex-item-align: end; align-self: flex-end; -webkit-box-flex: 1; -ms-flex: 1; flex: 1; }
+#buddypress #item-header #item-nav ul li { margin: 2px 0; }
+#buddypress #item-header #item-nav ul li a { padding: 10px; display: block; -webkit-box-shadow: 2px 0 0 #dedede; box-shadow: 2px 0 0 #dedede; -webkit-transition: all 0.15s ease; transition: all 0.15s ease; }
+#buddypress #item-header #item-nav ul li a:hover, #buddypress #item-header #item-nav ul li a:focus { color: #B20004; -webkit-box-shadow: 2px 0 0 #b0b0b0; box-shadow: 2px 0 0 #b0b0b0; }
+.nox #buddypress #item-header #item-nav ul li a { -webkit-box-shadow: 2px 0 0 #2e323b; box-shadow: 2px 0 0 #2e323b; }
+.nox #buddypress #item-header #item-nav ul li a:hover, .nox #buddypress #item-header #item-nav ul li a:focus { -webkit-box-shadow: 2px 0 0 #5f0002; box-shadow: 2px 0 0 #5f0002; }
+#buddypress #item-header #item-nav ul li.current a { -webkit-box-shadow: 2px 0 0 #B20004; box-shadow: 2px 0 0 #B20004; color: #B20004; }
+.nox #buddypress #item-header #item-nav ul li.current a { text-shadow: 0px 0px 10px #B20004, 0px 0px 3px #B20004; }
+#buddypress #item-body .profile { margin-top: 30px; }
+
+/*# sourceMappingURL=buddypress.css.map */

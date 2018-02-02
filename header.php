@@ -23,16 +23,13 @@
 
 		<div class="sidenav sidenav-closed nox">
 			<div class="sidenav-scroll fade-in-2">
-				<a class="js-toggleSidenav sidenav-close">
+				<a class="sidenav-close">
 					<i class="fa fa-times" aria-hidden="true"></i>
 				</a>
 				<div class="sidenav-container">
 
 					<?php get_sidebar(); ?>
-
-					<p style="margin: auto auto 50px auto; color: #2e323b">
-						Em desenvolvimento
-					</p>
+					
 				</div>
 			</div>
 		</div>

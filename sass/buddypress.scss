@@ -1,0 +1,96 @@
+@import 'variables'; //Variáveis globais
+
+
+#buddypress {
+
+   h2 {
+      color: $primary-color;
+   }
+   ul {
+      li {
+         list-style: none;
+      }
+   }
+
+   #item-header {
+      display: flex;
+      @extend .jumbotron;
+      padding: 10px;
+      flex-wrap: wrap;
+
+      align-items: center;
+      justify-content: center;
+
+      #item-header-avatar {
+         max-width: 33vw;
+         margin-right: 10px;
+
+         img.avatar {
+            height: auto;
+            margin: 0;
+            border-radius: 50%;
+            border: 2px solid $primary-color;
+         }
+      }
+      #item-header-content {
+         min-width: 100px;
+         flex: 1;
+         h2 {
+            font-size: 32px;
+         }
+      }
+      #item-nav {
+         align-self: flex-end;
+         flex: 1;
+
+         ul {
+            li {
+               margin: 2px 0;
+
+               a {
+                  padding: 10px;
+                  display: block;
+                  box-shadow: 2px 0 0 #dedede;
+
+                  transition: all 0.15s ease;
+
+                  &:hover,
+                  &:focus {
+                     color: $primary-color;
+                     box-shadow: 2px 0 0 #b0b0b0;
+                  }
+
+                  .nox & {
+                     box-shadow: 2px 0 0 $base3;
+
+                     &:hover,
+                     &:focus {
+                        box-shadow: 2px 0 0 $primary-darker;
+                     }
+                  }
+               }
+
+               &.current a {
+                  box-shadow: 2px 0 0 $primary-color;
+                  color: $primary-color;
+
+                  .nox & {
+                     text-shadow: 0px 0px 10px $primary-color,0px 0px 3px $primary-color;
+                  }
+               }
+            }
+         }
+      }
+   }
+
+   #item-body {
+
+      .profile {
+         margin-top: 30px;
+
+      }
+
+   }
+
+
+}
