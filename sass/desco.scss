@@ -15,6 +15,24 @@ body, html {
    transition: all 0.15s ease-in-out;
    &.nox {
       background: $base1;
+
+      &::-webkit-scrollbar-track, &::-webkit-scrollbar {
+         background: $base1;
+      }
+   }
+   &.page-overlay {
+     overflow: hidden;
+   }
+
+   &::-webkit-scrollbar-track, &::-webkit-scrollbar {
+   	background-color: $white1;
+   }
+   &::-webkit-scrollbar {
+   	width: 7px;
+   }
+   &::-webkit-scrollbar-thumb {
+   	background-color: $primary-darker;
+   	border-radius: 0px;
    }
 }
 h1 {
@@ -48,6 +66,7 @@ footer.desco-footer {
    background-color: $primary-darker;
    color: $white1;
    padding: 30px;
+   margin-top: 50px;
 
    .nox & {
       background-color: #1b0606;
@@ -99,4 +118,19 @@ footer.desco-footer {
 
 .highlight {
    background-color: rgba(255, 131, 73, 0.08);
+}
+
+#page-overlay {
+   position: fixed;
+   display: none;
+   background-color: rgba(0, 0, 0, 0.5);
+   top: 0;
+   left: 0;
+   bottom: 0;
+   right: 0;
+   z-index: 7;
+
+   body.page-overlay & {
+      display: block;
+   }
 }

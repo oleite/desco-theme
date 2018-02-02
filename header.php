@@ -19,24 +19,23 @@
 
 		<i id="nox" class="fa fa-3x fa-lightbulb-o" aria-hidden="true"></i>
 
+		<div id="page-overlay" class="fade-in-2"></div>
 
-		<div class="sidenav sidenav-closed">
-			<div class="sidenav-container">
-				<div class="sidenav-scroll">
-					<a class="js-toggleSidenav sidenav-close">
-						<i class="fa fa-times" aria-hidden="true"></i>
-					</a>
+		<div class="sidenav sidenav-closed nox">
+			<div class="sidenav-scroll fade-in-2">
+				<a class="js-toggleSidenav sidenav-close">
+					<i class="fa fa-times" aria-hidden="true"></i>
+				</a>
+				<div class="sidenav-container">
+
 					<?php get_sidebar(); ?>
 
 					<p style="margin: auto auto 50px auto; color: #2e323b">
 						Em desenvolvimento
 					</p>
-
 				</div>
 			</div>
 		</div>
-
-
 
 
 

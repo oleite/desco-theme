@@ -9,7 +9,7 @@
       color: #ddd;
       font-size: 20px;
       font-weight: 100;
-      background: $primary-darker;
+      background-color: $primary-darker;
       border-radius: 10px;
       letter-spacing: 0.2px;
    }
@@ -18,6 +18,12 @@
       margin: 20px 75px;
       border: 0;
    	border-bottom: 1px dotted #666;
+   }
+
+   &:hover {
+      .widget-title {
+         background-color: #6d0002;
+      }
    }
 }
 

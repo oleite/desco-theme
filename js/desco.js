@@ -2,10 +2,32 @@ jQuery(document).ready(function($) {
 
 
 //----- SIDENAV -----//
-   $(document).on('click', '.js-toggleSidenav', function() {
+   function toggleSidenav() {
       $('.sidenav').toggleClass('sidenav-closed');
+      $('body').toggleClass('page-overlay');
+
       if ($(window).width() > 1100) {
          $('.sidenav-open').toggleClass('sidenav-opened');
+      }
+   }
+   $(document).on('click', '.js-toggleSidenav', function() {
+      toggleSidenav();
+   });
+
+   $(document).keyup(function(e) {
+      if  (e.keyCode == 27) { // escape key maps to keycode `27`
+         toggleSidenav();
+      }
+
+   });
+   $(document).mouseup(function(e)
+   {
+      var container = $(".sidenav-container");
+
+      // if the target of the click isn't the container nor a descendant of the container
+      if (!container.is(e.target) && container.has(e.target).length === 0 && !$('.sidenav').hasClass('sidenav-closed'))
+      {
+          toggleSidenav();
       }
    });
 
@@ -101,9 +123,6 @@ jQuery(document).ready(function($) {
             loading_icon_switch();
             that.removeClass('loading');
 
-            if (localStorage['nox'] == 'true') {
-               $('.js-posts-container *').addClass('nox');
-            }
          }
 
       });

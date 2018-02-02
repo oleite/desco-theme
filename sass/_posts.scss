@@ -306,9 +306,16 @@
 
       &.badge-age-18 {
          background-color: $base1;
+
+         .nox & {
+            background-color: $primary-darker;
+         }
       }
       &.badge-age-16 {
          background-color: $primary-darker;
+         .nox & {
+            background-color: #460001;
+         }
       }
    }
 
