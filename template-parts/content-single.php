@@ -34,10 +34,12 @@ $featured = get_post_meta( get_the_ID(), 'desco_featured', TRUE ); //possíveis 
 
    </header>
 
-   <div class="entry-content js-highlightable">
 
-      <?php the_content(); ?>
-
+   <div class="entry-content">
+      <div class="entry-content-container js-highlightable">
+         <div class="vertical-line"></div>
+         <?php the_content(); ?>
+      </div>
    </div>
 
    <footer class="entry-footer">

@@ -36,26 +36,39 @@ body, html {
 }
 .header-container,
 #wrapper,
-.desco-footer,
-.header-tools {
+.desco-footer {
    transition: filter 0.25s ease;
    .page-overlay & {
       backface-visibility: hidden;
       perspective: 1000;
       transform: translate3d(0,0,0);
       transform: translateZ(0);
-      filter: blur(2px) grayscale(0.8);
+      filter: grayscale(0.5);
    }
 }
 h1 {
    font-size: 2em;
 }
+h1,h2,h3 {
+   font-family: Georgia,Cambria,Times New Roman,Times,sans-serif;
+}
 p {
+   color: rgba(0,0,0,.8);
+   font-family: Georgia,Cambria,Times New Roman,Times,sans-serif;
+   font-weight: 400;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+   font-size: 16px;
+   letter-spacing: -.004em;
+   line-height: 1.58;
+
+   .nox & {
+      color: $white2;
+   }
+}
+p.old {
    font-size: 16px;
    line-height: 1.5em;
-   .nox & {
-      color: $white1;
-   }
 }
 a {
 	text-decoration: none;

@@ -5,10 +5,14 @@ $primary-darker: #5f0002;
 $base1: #0a090a;
 $base2: #111017;
 $base3: #2e323b;
+$base4: hsl(0, 10%, 6%);
+$base5: hsla(300, 5%, 5%, 1);
 
 $white1: #f5f5f5;
+$white2: #ddc4a3;
 
 $max-width: 1200px; //content max-width
+$max-width-text: 800px; //text max-width
 
 
 //Mixins
@@ -71,7 +75,7 @@ $max-width: 1200px; //content max-width
    transition: all 0.15s ease-in-out;
 
    .nox & {
-      background-color: hsla(300, 5%, 5%, 1);
+      background-color: $base5;
       border: 1px solid #111;
    }
 }

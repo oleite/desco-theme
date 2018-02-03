@@ -18,14 +18,17 @@
 
 		<div class="header-tools">
 			<i id="nox" class="fa fa-3x fa-lightbulb-o" aria-hidden="true"></i>
-			<a class="sidenav-close">
-				<i class="fa fa-times" aria-hidden="true"></i>
+			<a class="js-toggleSidenav sidenav-open">
+				<i class="fa fa-2x fa-bars" aria-hidden="true"></i>
 			</a>
 		</div>
 
 		<div id="page-overlay" class="fade-in-2"></div>
 
 		<div class="sidenav sidenav-closed nox">
+			<a class="sidenav-close">
+				<i class="fa fa-times" aria-hidden="true"></i>
+			</a>
 			<div class="sidenav-scroll fade-in-2">
 				<div class="sidenav-container">
 
@@ -38,10 +41,6 @@
 
 
       <header class="header-container">
-			<a class="js-toggleSidenav sidenav-open">
-				<i class="fa fa-2x fa-bars" aria-hidden="true"></i>
-			</a>
-
          <nav id="top-menu">
 				<?php wp_nav_menu( array( 'theme_location' => 'primary' )); ?>
          </nav>
