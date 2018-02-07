@@ -13,6 +13,10 @@
 
             		get_template_part( 'template-parts/content-single', get_post_format() );
 
+                  if ( comments_open() ):
+                     comments_template();
+                  endif;
+
             	endwhile;
 
             endif; ?>

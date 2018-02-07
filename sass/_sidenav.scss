@@ -74,6 +74,10 @@ $sidenav-width: 280px;
    &:focus {
       color: $primary-color;
    }
+
+   .sidenav-closed & {
+      display: none;
+   }
 }
 
 .sidenav-open {

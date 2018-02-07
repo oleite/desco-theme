@@ -41,6 +41,7 @@
 			add_theme_support('title-tag'); //permite que o WordPress gerencie a tag title automaticamente
 			add_theme_support('menus'); //suporte de menus (ex.: navbar)
 			add_theme_support( 'post-thumbnails' );
+			add_theme_support( 'html5', array('comment-list', 'comment-form', 'search-form', 'gallery', 'caption') ); //Activate HTML5 features
 
 			register_nav_menu('primary','Navegação Primária do Cabeçário');
 			register_nav_menu('user','Navegação do usuário');
@@ -108,8 +109,17 @@
 	}
 
 
+	//Barra de navegação entre páginas da seção de comentários
+	function desco_get_post_comments_navigation() {
+		if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) {
+			require( 'inc/templates/desco-comments-nav.php' );
+		}
+	}
 
-//
+
+	/**
+	 * Search Form
+	 */
 
 	function desco_search_form( $form ) {
 	    $form = '
@@ -130,9 +140,9 @@
 
 
 
-/**
- * Automatically add IDs to headings such as <h2></h2>
- */
+	/**
+	 * Automatically add IDs to headings such as <h2></h2>
+	 */
 
 	function auto_id_headings( $content ) {
 		$content = preg_replace_callback( '/(\<h[1-6](.*?))\>(.*)(<\/h[1-6]>)/i', function( $matches ) {

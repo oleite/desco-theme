@@ -1,0 +1,76 @@
+#wpcomm {
+	.avatar {
+		border: 1px solid $primary-color;
+		padding: 0;
+	}
+
+	.wc-form-wrapper,
+	.wpdiscuz-subscribe-bar,
+	.wpdiscuz-front-actions {
+		border: 0;
+		background-color: $white3;
+		.nox & {
+			background-color: $base4;
+		}
+	}
+
+	.wc-comment {
+		margin-bottom: 10px;
+
+		&.wc-reply .wc-comment-right {
+			background-color: $white3;
+			.nox & {
+				background-color: $base4;
+			}
+		}
+		.wc-comment-right {
+			border: 1px solid transparent;
+			border-bottom-right-radius: 35px;
+			border-top-left-radius: 15px;
+			border-bottom: 1px solid rgba(136, 136, 136, .3);
+
+			.nox & {
+				background-color: #1a1515;
+				border-color: #111;
+				border-bottom: 1px solid rgba(136, 136, 136, .3);
+			}
+
+			.wc-vote-link,
+			.wc-vote-result,
+			.wpf-cta,
+			.wc-comment-footer,
+			.wc-cta-button  {
+				border-color: transparent;
+			}
+
+			.wc-cta-button {
+				background: rgba(136, 136, 136, .3);
+				.nox & {
+					color: #aaa;
+				}
+			}
+
+			.wc-comment-author {
+				color: $primary-color !important;
+				border-bottom: 1px solid $primary-color;
+				//padding: 5px 15px;
+				.nox & {
+					color: $primary-color;
+				}
+			}
+			.wc-comment-author, .wc-comment-author a {
+				font-weight: bold;
+				font-size: 20px;
+
+				@media screen and (max-width: 650px) {
+					font-size: 20px;
+				}
+			}
+		}
+
+		.wc-comment-label {
+			opacity: .5;
+			border-radius: 10px;
+		}
+	}
+}

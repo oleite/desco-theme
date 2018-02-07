@@ -298,13 +298,14 @@
    }
 
    .entry-content {
-      background-color: hsla(0, 0%, 99%, 1);
-      box-shadow: 0 0 100px 50px hsla(0, 0%, 99%, 1);
+      background-color: $white3;
+      box-shadow: 0 0 100px 50px $white3;
       transition: all 0.15s ease-in-out;
 
       color: $white2;
 
       p {
+         text-indent: 20px;
          font-size: 18px;
       }
 

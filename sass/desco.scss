@@ -4,6 +4,8 @@
 @import 'sidenav'; //barra lateral esquerda
 @import 'widgets'; //custom widgets
 @import 'posts'; //posts styling
+@import 'posts-comments'; //comments styling
+@import 'posts-comments-wpdiscuz.scss'; //wpdiscuz comments styling
 
 body, html {
    background: $white1;
@@ -14,6 +16,7 @@ body, html {
    transition: all 0.15s ease-in-out;
    &.nox {
       background: $base1;
+      color: $white2;
 
       &::-webkit-scrollbar-track, &::-webkit-scrollbar {
          background: $base1;
@@ -49,12 +52,11 @@ body, html {
 h1 {
    font-size: 2em;
 }
-h1,h2,h3 {
+p,h1,h2,h3 {
    font-family: Georgia,Cambria,Times New Roman,Times,sans-serif;
 }
 p {
    color: rgba(0,0,0,.8);
-   font-family: Georgia,Cambria,Times New Roman,Times,sans-serif;
    font-weight: 400;
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale;
