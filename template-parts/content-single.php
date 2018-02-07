@@ -4,7 +4,7 @@ $featured = get_post_meta( get_the_ID(), 'desco_featured', TRUE ); //possíveis 
 
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class('content-single'); ?>>
-   <header class="entry-header jumbotron">
+   <header class="entry-header jumbotron fade-in">
 
       <?php if(has_post_thumbnail()): ?>
          <div class="standard-featured">
@@ -35,7 +35,7 @@ $featured = get_post_meta( get_the_ID(), 'desco_featured', TRUE ); //possíveis 
    </header>
 
 
-   <div class="entry-content">
+   <div class="entry-content fade-in">
       <div class="entry-content-container js-highlightable">
          <div class="vertical-line"></div>
          <?php the_content(); ?>

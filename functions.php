@@ -85,7 +85,7 @@
 		$comments = get_comments_number();
 
 		if ($comments > 0){
-			$output = '<span class="comments-number">' . $comments . ' <i class="fa fa-comments-o" aria-hidden="true"></i></span>';
+			$output = '<span class="comments-number"><a href="' . get_the_permalink() . '#comments">' . $comments . '<i class="fa fa-comments-o" aria-hidden="true"></i></a></span>';
 		}
 
 		return $output;
@@ -154,3 +154,15 @@
 	    return $content;
 	}
 	add_filter( 'the_content', 'auto_id_headings' );
+
+
+	///////////////////////////////////////////////////////////////////////
+	// BuddyPress Profile URL Integration //////////////////////////////////
+	////////////////////////////////////////////////////////////////////////
+	add_filter('wpdiscuz_profile_url', 'wpdiscuz_bp_profile_url', 10, 2);
+	function wpdiscuz_bp_profile_url($profile_url, $user) {
+	    if ($user && class_exists('BuddyPress')) {
+	        $profile_url = bp_core_get_user_domain($user->ID);
+	    }
+	    return $profile_url;
+	}
