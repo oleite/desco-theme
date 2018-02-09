@@ -85,7 +85,7 @@
 		$comments = get_comments_number();
 
 		if ($comments > 0){
-			$output = '<span class="comments-number"><a href="' . get_the_permalink() . '#comments">' . $comments . '<i class="fa fa-comments-o" aria-hidden="true"></i></a></span>';
+			$output = '<span class="comments-number"><a href="' . get_the_permalink() . '#comments">' . $comments . ' <i class="fa fa-comments-o" aria-hidden="true"></i></a></span>';
 		}
 
 		return $output;

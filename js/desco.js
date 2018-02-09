@@ -130,12 +130,12 @@ jQuery(document).ready(function($) {
 
 //
 
-$(".fade-in").each(function(index){
+   $(".fade-in").each(function(index){
       var s = 0.1;
-     $(this).css({
-          'animation-delay' : s*(1+index) + 's'
-     });
- });
+      $(this).css({
+         'animation-delay' : s*(1+index) + 's'
+      });
+   });
 
 
 });

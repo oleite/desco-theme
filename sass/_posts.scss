@@ -307,6 +307,14 @@
       p {
          text-indent: 20px;
          font-size: 18px;
+
+         &:first-of-type::first-letter {
+            font-size: 40px;
+         }
+      }
+      h1 {
+         text-align: center;
+         border-bottom: 1px solid;
       }
 
       .entry-content-container {
@@ -349,9 +357,6 @@
          p {
             font-size: 21px;
             text-indent: 50px;
-         }
-         &::first-letter {
-            font-size: 40px;
          }
       }
    }

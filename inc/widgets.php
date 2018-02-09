@@ -21,7 +21,7 @@ class Desco_Profile_Widget extends WP_Widget {
    public function widget( $args, $instance) {
 
       $current_user = wp_get_current_user();
-      $current_user_name =  bp_get_displayed_user_fullname();
+      $current_user_name = $current_user->user_firstname;
       $profilePicURL = get_avatar_url($current_user->user_email);
       $profilePicRedirect = bp_loggedin_user_domain();
       $profileSettingsRedirect = get_edit_user_link();
@@ -41,7 +41,7 @@ class Desco_Profile_Widget extends WP_Widget {
 
          }
       } else {
-         echo '<a class"login-button" href="' . wp_login_url() . '" title="Fazer Log In"><h2>LOG IN</h2></a>';
+         echo '<a class="login-button" href="' . wp_login_url() . '" title="Fazer Log In"><h2>LOG IN</h2></a>';
       }
 
       echo $args['after_widget'];
