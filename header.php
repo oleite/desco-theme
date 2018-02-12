@@ -16,11 +16,12 @@
 
 	<body <?php body_class(); ?>>
 
+		<div class="testbox">
+
+		</div>
 		<div class="header-tools">
-			<i id="nox" class="fa fa-3x fa-lightbulb-o" aria-hidden="true"></i>
-			<a class="js-toggleSidenav sidenav-open">
-				<i class="fa fa-2x fa-bars" aria-hidden="true"></i>
-			</a>
+			<i id="nox" class="fa fa-lightbulb-o" aria-hidden="true"></i>
+			<i id="sidenav-open" class="fa fa-bars js-toggleSidenav" aria-hidden="true"></i>
 		</div>
 
 		<div id="page-overlay" class="fade-in-2"></div>
@@ -29,12 +30,10 @@
 			<a class="sidenav-close">
 				<i class="fa fa-times" aria-hidden="true"></i>
 			</a>
-			<div class="sidenav-scroll fade-in-2">
-				<div class="sidenav-container">
+			<div class="sidenav-container fade-in-2">
 
-					<?php get_sidebar(); ?>
+				<?php get_sidebar(); ?>
 
-				</div>
 			</div>
 		</div>
 

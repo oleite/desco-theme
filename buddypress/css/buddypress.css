@@ -28,6 +28,15 @@
 .nox #buddypress #item-header #item-nav ul li a:hover, .nox #buddypress #item-header #item-nav ul li a:focus { -webkit-box-shadow: 2px 0 0 #5f0002; box-shadow: 2px 0 0 #5f0002; }
 #buddypress #item-header #item-nav ul li.current a { -webkit-box-shadow: 2px 0 0 #B20004; box-shadow: 2px 0 0 #B20004; color: #B20004; }
 .nox #buddypress #item-header #item-nav ul li.current a { text-shadow: 0px 0px 10px #B20004, 0px 0px 3px #B20004; }
+#buddypress #item-body .item-list-tabs { overflow: auto; }
+#buddypress #item-body .item-list-tabs ul { padding: 0; margin: 0; overflow: auto; display: -webkit-box; display: -ms-flexbox; display: flex; }
+#buddypress #item-body .item-list-tabs ul li { -webkit-box-flex: 1; -ms-flex: 1; flex: 1; float: left; }
+#buddypress #item-body .item-list-tabs ul li a { display: block; text-align: center; padding: 5px; background-color: #fafafa; border: 1px solid #eee; -webkit-transition: all 0.15s ease-in-out; transition: all 0.15s ease-in-out; border-top: 2px solid transparent; }
+.nox #buddypress #item-body .item-list-tabs ul li a { background-color: #111017; border: 1px solid #110e0e; border-top: 2px solid transparent; }
+#buddypress #item-body .item-list-tabs ul li a:hover { color: #B20004; }
+#buddypress #item-body .item-list-tabs ul li.current a { border-top: 2px solid #B20004; color: #B20004; }
+.nox #buddypress #item-body .item-list-tabs ul li.current a { text-shadow: 0px 0px 10px #B20004, 0px 0px 3px #B20004; }
+#buddypress #item-body .item-list-tabs ul li form { display: block; text-align: center; padding: 5px; -webkit-transition: all 0.15s ease-in-out; transition: all 0.15s ease-in-out; }
 #buddypress #item-body .profile { margin-top: 30px; }
 
 /*# sourceMappingURL=buddypress.css.map */
