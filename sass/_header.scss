@@ -16,9 +16,14 @@ header.header-container {
          align-items: center;
 
       .logo {
-         height: 125px;
+         height: 100px;
          align-self: baseline;
-         margin: 0 85px;
+         margin: 10px 85px;
+
+         @media (min-width: 800px){
+            height: 125px;
+            margin: 0 85px;
+         }
 
          img {
             height: 100%;

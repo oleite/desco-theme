@@ -21,7 +21,7 @@
 }
 
 .entry-title {
-   margin: 0;
+   margin: 0 0 5px 0;
    color: $primary-color;
    a:hover {
       color: #ce1e22;
@@ -201,6 +201,13 @@
    }
 }
 
+#main {
+   margin-top: 45px;
+
+   @media (min-width: 800px) {
+      margin-top: 75px;
+   }
+}
 
 /* --- Home-style (postgrid) only --- */
 .home,
@@ -208,9 +215,7 @@
 .tag,
 .category,
 .search {
-   #main {
-      margin-top: 75px;
-   }
+
 
    .container {
 

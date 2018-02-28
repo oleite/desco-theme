@@ -1,5 +1,5 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-   <header class="entry-header jumbotron">
+   <header class="entry-header">
 
       <?php if(has_post_thumbnail()): ?>
          <div class="standard-featured">
@@ -8,7 +8,7 @@
       <?php endif; ?>
 
       <span class="entry-headercontent">
-         <h1 class="entry-title">
+         <h1>
             <?php
                the_title();
                edit_post_link( __( 'Editar', 'textdomain' ), '<p>', '</p>', null, 'btn btn-primary btn-edit-post-link' );
@@ -17,13 +17,13 @@
       </span>
 
    </header>
-   <hr />
+
    <div class="entry-content">
 
       <?php the_content(); ?>
 
    </div>
-   <hr />
+
    <footer class="entry-footer">
 
 

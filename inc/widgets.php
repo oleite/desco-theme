@@ -41,7 +41,18 @@ class Desco_Profile_Widget extends WP_Widget {
 
          }
       } else {
-         echo '<a class="login-button" href="' . wp_login_url() . '" title="Fazer Log In"><h2>LOG IN</h2></a>';
+         print ('
+            <div class="login-button">
+               <a href="' . wp_login_url() . '" title="Fazer Log In">
+                  <h2>LOG IN</h2>
+               </a>
+               <hr />
+               <a href="' . wp_registration_url() . '" title="Fazer cadastro">
+                  <h4>Cadastre-se</h4>
+               </a>
+            </div>
+         ');
+
       }
 
       echo $args['after_widget'];

@@ -48,15 +48,38 @@
    }
 
    .login-button {
+      text-align: center;
+
       color: #ccc;
       border: 1px dotted #666;
-      padding: 0 40px;
       transition: all 110ms;
+
       &:hover {
-         color: $white1;
          border: 1px solid $primary-color;
       }
+
+      a {
+         padding: 15px;
+         display: block;
+         border-right: 2px solid transparent;
+         &:hover {
+            color: $white1;
+
+            border-right: 2px solid $primary-color;
+         }
+      }
+      h2,h4,p {
+         margin: 0;
+      }
+
+      hr {
+         margin: 0 75px;
+         width: 100%;
+         border: 0;
+         border-bottom: 1px dotted #666;
+      }
    }
+
    .logout-button {
       margin: 0;
       color: #999;
