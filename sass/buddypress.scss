@@ -65,6 +65,39 @@
             float: left;
          }
       }
+
+
+      .error {
+         padding: 5px;
+         background-color: hsla(359, 100%, 35%, .05);
+         border-left: 5px solid $primary-color;
+         color: $primary-color;
+      }
+      #pass-strength-result {
+         font-weight: bold;
+         padding: 5px;
+         display: none;
+
+         &.short,&.bad,&.good,&.strong {
+            display: block;
+         }
+         &.short { //muito fraca
+            border-top: 2px solid $primary-color;
+            color: $primary-color;
+         }
+         &.bad { //fraca
+            border-top: 2px solid #b25500;
+            color: #b25500;
+         }
+         &.good { //medio
+            border-top: 2px solid #a4b300;
+            color: #a4b300;
+         }
+         &.strong { //forte
+            border-top: 2px solid #00b307;
+            color: #00b307;
+         }
+      }
    }
 
 

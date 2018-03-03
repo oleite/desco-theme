@@ -21,6 +21,13 @@
 @media (min-width: 600px) { #buddypress #signup_form.standard-form #profile-details-section, #buddypress #signup_form.standard-form #basic-details-section, #buddypress #signup_form.standard-form #blog-details-section { width: 48%; } }
 @media (min-width: 600px) { #buddypress #signup_form.standard-form #profile-details-section { float: right; }
   #buddypress #signup_form.standard-form #basic-details-section { float: left; } }
+#buddypress #signup_form.standard-form .error { padding: 5px; background-color: rgba(179, 0, 3, 0.05); border-left: 5px solid #B20004; color: #B20004; }
+#buddypress #signup_form.standard-form #pass-strength-result { font-weight: bold; padding: 5px; display: none; }
+#buddypress #signup_form.standard-form #pass-strength-result.short, #buddypress #signup_form.standard-form #pass-strength-result.bad, #buddypress #signup_form.standard-form #pass-strength-result.good, #buddypress #signup_form.standard-form #pass-strength-result.strong { display: block; }
+#buddypress #signup_form.standard-form #pass-strength-result.short { border-top: 2px solid #B20004; color: #B20004; }
+#buddypress #signup_form.standard-form #pass-strength-result.bad { border-top: 2px solid #b25500; color: #b25500; }
+#buddypress #signup_form.standard-form #pass-strength-result.good { border-top: 2px solid #a4b300; color: #a4b300; }
+#buddypress #signup_form.standard-form #pass-strength-result.strong { border-top: 2px solid #00b307; color: #00b307; }
 #buddypress h2 { color: #B20004; }
 #buddypress ul li { list-style: none; }
 #buddypress #item-header { display: -webkit-box; display: -ms-flexbox; display: flex; padding: 10px; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
