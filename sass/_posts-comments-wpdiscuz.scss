@@ -5,6 +5,8 @@
 		padding: 0;
 	}
 
+
+
 	.wc-form-wrapper,
 	.wpdiscuz-subscribe-bar,
 	.wpdiscuz-front-actions {
@@ -30,10 +32,17 @@
 			border-top-left-radius: 15px;
 			border-bottom: 1px solid rgba(136, 136, 136, .3);
 
+			box-shadow: 0px 10px 9px -7px rgba(0,0,0,0.05);
+
 			.nox & {
 				background-color: #1a1515;
 				border-color: #111;
 				border-bottom: 1px solid rgba(136, 136, 136, .3);
+			}
+
+			.wc-comment-header {
+				box-shadow: 0px 10px 9px -7px rgba(0,0,0,0.05);
+				border: 0;
 			}
 
 			.wc-vote-link,
@@ -69,9 +78,34 @@
 			}
 		}
 
-		.wc-comment-label {
-			opacity: .5;
-			border-radius: 10px;
+		.wc-comment-left {
+			.wc-comment-label {
+				background: $white1;
+				border-bottom: 0 !important;
+				border-radius: 10px;
+				box-shadow: 0px 10px 9px -7px rgba(0,0,0,0.05);
+
+				.nox & {
+					background: #310b0b;
+				}
+			}
+
+			.wpd-xborder {
+				border-right: 1px solid $primary-color;
+			}
 		}
 	}
+
+	.wc-sticky-comment.wc-comment .wc-comment-right .wc-comment-header {
+		background: #ffefef;
+		border-bottom: 1px dotted $primary-color;
+		.nox & {
+			background: #310b0b;
+		}
+		.wpd-sticky {
+			color: $primary-color;
+			border: 1px dotted $primary-color;
+		}
+	}
+
 }
