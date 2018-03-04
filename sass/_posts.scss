@@ -373,6 +373,71 @@
    }
 }
 
+/* --- Page Only --- */
+.page {
+   .entry-header {
+      h1 {
+         text-align: center;
+         border-bottom: 1px dotted;
+
+         &::before {
+            content: "- ";
+         }
+         &::after {
+            content: " -";
+         }
+
+         .nox & {
+            color: $primary-color;
+            filter: drop-shadow( 0 0 5px $primary-color);
+         }
+      }
+
+      .edit-post-btn {
+         display: block;
+         text-align: right;
+      }
+   }
+   .entry-content {
+      color: $white2;
+
+      p {
+         text-indent: 20px;
+         font-size: 18px;
+
+         text-align: justify;
+         text-justify: inter-word;
+      }
+      h1,h2,h3 {
+         color: $primary-color;
+      }
+      h1 {
+         text-align: center;
+         border-bottom: 1px solid;
+      }
+   }
+
+
+   &.nox {
+
+   }
+
+   @media (min-width: 800px) {
+      .entry-header {
+         flex-direction: row;
+         text-align: left;
+      }
+
+      .entry-content {
+         p {
+            font-size: 21px;
+            text-indent: 50px;
+         }
+      }
+   }
+}
+
+
 
 .badge {
    &.badge-age {

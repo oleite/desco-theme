@@ -40,7 +40,7 @@
 			'low'
 		); //you can change the 4th paramter i.e. post to custom post type name, if you want it for something else
 	}
-	add_action( 'add_meta_boxes', 'desco_featured_add_meta_box' );
+	add_action( 'add_meta_boxes', 'desco_featured_add_meta_box' ); // DESABILITADO ATÈ PROPER IMPLEMENTAÇÂO
 
 	/**
 	* Prints the box content.

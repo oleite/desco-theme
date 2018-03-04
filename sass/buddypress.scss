@@ -8,30 +8,6 @@
          float: none;
       }
 
-      input[type="text"],
-      input[type="email"],
-      input[type="password"],
-      textarea {
-         width: 100%;
-         box-sizing: border-box;
-
-         font-family: inherit;
-         font-size: 25px;
-         color: $primary-darker;
-         outline: none;
-
-         padding: 5px;
-         padding-left: 10px;
-         border: none;
-         box-shadow: 0 1.5px 3px 0px rgba(0,0,0,0.2);
-
-         .nox & {
-            background-color: #1e1f25;
-            color: $white1;
-            box-shadow: 0 1px 0 $primary-darker;
-         }
-      }
-
       label {
          display: inline-block;
          margin-top: 30px;

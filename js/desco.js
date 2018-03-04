@@ -41,8 +41,7 @@ jQuery(document).ready(function($) {
      $(noxSelector).addClass('nox');
    }
 
-   //Nox button
-   $(document).on('click', '#nox', function() {
+   function toggleNox() {
 
       if (isNox == 'true') {
          $(noxSelector).removeClass('nox');
@@ -55,6 +54,18 @@ jQuery(document).ready(function($) {
       }
 
       return false;
+   }
+
+   //Nox button
+   $(document).on('click', '#nox', function(){
+      toggleNox();
+   });
+
+   //"shift + N" toggles nox
+   $(document).keyup(function(e) {
+      if (e.shiftKey && e.keyCode == 78) {
+         toggleNox();
+      }
    });
 
    //Nox button appearance

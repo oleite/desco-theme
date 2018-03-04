@@ -11,9 +11,11 @@
          <h1>
             <?php
                the_title();
-               edit_post_link( __( 'Editar', 'textdomain' ), '<p>', '</p>', null, 'btn btn-primary btn-edit-post-link' );
             ?>
          </h1>
+         <p>
+            <?php edit_post_link( __( '[editar]', 'textdomain' ), '<span>', '</span>', null, 'edit-post-btn' ); ?>
+         </p>
       </span>
 
    </header>
