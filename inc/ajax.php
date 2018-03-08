@@ -8,6 +8,7 @@ function desco_load_more() {
    $paged = $_POST["page"] + 1;
    $query = new WP_query(array(
       'post-type' => 'post',
+      'post-status' => 'publish',
       'paged' => $paged
    ));
 

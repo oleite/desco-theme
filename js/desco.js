@@ -129,10 +129,15 @@ jQuery(document).ready(function($) {
          },
          success : function( response ) {
 
-            that.data('page', newPage);
-            $('.js-posts-container').append( response );
-            loading_icon_switch();
-            that.removeClass('loading');
+            setTimeout(function(){
+
+               that.data('page', newPage);
+               $('.js-posts-container').append( response );
+
+               loading_icon_switch();
+               that.removeClass('loading');
+
+            }, 1000);
 
          }
 

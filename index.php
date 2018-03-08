@@ -4,7 +4,7 @@
 
       <main id="main" class="site-main" role="main">
 
-         <div class="home-header fade-in">
+         <div class="home-header fade-in2">
             <?php
                 // query for the specific page
                 $query_homepage = new WP_Query( 'pagename=homepage' );

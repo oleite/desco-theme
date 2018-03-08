@@ -1,4 +1,4 @@
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('fade-in'); ?>>
    <header class="entry-header">
 
       <?php if(has_post_thumbnail()): ?>

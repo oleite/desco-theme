@@ -89,6 +89,10 @@
 
       transition: all 100ms ease;
 
+      span {
+         transition: all 200ms ease;
+      }
+
       &:hover,
       &:focus,
       &.loading {
@@ -97,6 +101,9 @@
       }
       &.loading {
          cursor: default;
+         span {
+            opacity: 0;
+         }
       }
 
       .nox & {
