@@ -22,7 +22,7 @@ class Desco_Profile_Widget extends WP_Widget {
 
       $current_user = wp_get_current_user();
       $current_user_name = $current_user->user_firstname;
-      $profilePicURL = get_avatar_url($current_user->user_email);
+      $profilePicURL = get_avatar_url(get_current_user_id());
       $profilePicRedirect = bp_loggedin_user_domain();
       $profileSettingsRedirect = get_edit_user_link();
       $profilePicTitle = "Ir para configurações de perfil";

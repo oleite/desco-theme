@@ -21,6 +21,7 @@
 		</div>
 		<div class="header-tools">
 			<i id="nox" class="fa fa-lightbulb-o" aria-hidden="true"></i>
+			<img id="logged-avatar" class="js-toggleSidenav" src="<?php echo get_avatar_url(get_current_user_id()); ?>">
 			<i id="sidenav-open" class="fa fa-bars js-toggleSidenav" aria-hidden="true"></i>
 		</div>
 

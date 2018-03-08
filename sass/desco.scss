@@ -188,6 +188,16 @@ input[type="submit"] {
       align-content:center;
    }
 
+   #logged-avatar {
+      pointer-events: auto;
+
+      height: 45px;
+      border: 1px solid $primary-color;
+      border-radius: 50%;
+      margin-left: auto;
+
+      cursor: pointer;
+   }
 
    #sidenav-open {
       color: $primary-color;
