@@ -20,7 +20,7 @@
 	}
 	add_filter( 'login_headerurl', 'desco_loginlogo_url' );
 
-	show_admin_bar(false);
+	//show_admin_bar(false); //Remove a barra de admin
 
 /*
 	====================

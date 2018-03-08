@@ -137,7 +137,7 @@ jQuery(document).ready(function($) {
                loading_icon_switch();
                that.removeClass('loading');
 
-            }, 1000);
+            }, 100);
 
          }
 
