@@ -248,6 +248,8 @@
 
 				</div><!-- #profile-details-section -->
 
+				<div style="clear: both;"></div>
+
 				<?php
 
 				/**

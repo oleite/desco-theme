@@ -3,6 +3,10 @@
 #buddypress {
 
    .standard-form {
+      p {
+         text-indent: 0;
+      }
+
 
       li {
          float: none;
@@ -17,6 +21,79 @@
          color: #999;
 
 
+      }
+
+
+      fieldset {
+         @extend .jumbotron;
+
+         legend {
+            margin-top: 30px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #999;
+         }
+
+         .field-visibility-settings,
+         .field-visibility-settings-toggle {
+            button {
+               color: #555;
+               border: 1px solid #ccc;
+               background: #f7f7f7;
+               box-shadow: 0 1px 0 #ccc;
+               vertical-align: top;
+
+               font-size: 13px;
+               line-height: 26px;
+               height: 28px;
+               padding: 0 10px 1px;
+
+               border-radius: 3px;
+
+               cursor: pointer;
+            }
+
+            .current-visibility-level {
+               font-weight: bold;
+            }
+
+            & > span {
+               vertical-align: middle;
+               margin-right: 10px;
+            }
+         }
+
+         .field-visibility-settings {
+            display: none !important;
+         }
+         .field-visibility-settings-open {
+            display: block !important;
+         }
+         .field-visibility-settings-toggle {
+            font-size: 14px;
+            color: #999;
+         }
+         .field-visibility-settings-notoggle {
+            display: none;
+         }
+         .field-visibility-settings-close {
+            margin-left: 20px;
+         }
+
+
+         .radio {
+            label {
+               display: block;
+               margin: 0;
+            }
+         }
+
+         .description {
+            margin: 2px 0 5px;
+            font-size: 14px;
+            font-style: italic;
+            color: #666;
+         }
       }
    }
 
@@ -73,6 +150,10 @@
             border-top: 2px solid #00b307;
             color: #00b307;
          }
+      }
+
+      .submit {
+         text-align: center;
       }
    }
 
@@ -170,55 +251,55 @@
 
       .item-list-tabs {
          overflow: auto;
+      }
+      .item-list-tabs ul,
+      .button-nav {
+         padding: 0;
+         margin: 0;
+         overflow: auto;
 
-         ul {
-            padding: 0;
-            margin: 0;
-            overflow: auto;
+         display: flex;
 
-            display: flex;
+         li {
+            flex: 1;
+            float: left;
 
-            li {
-               flex: 1;
-               float: left;
+            a {
+               display: block;
+               text-align: center;
+               padding: 5px;
 
-               a {
-                  display: block;
-                  text-align: center;
-                  padding: 5px;
+               background-color: hsla(0, 0%, 98%, 1);
+               border: 1px solid #eee;
+               transition: all 0.15s ease-in-out;
+               border-top: 2px solid transparent;
 
-                  background-color: hsla(0, 0%, 98%, 1);
-                  border: 1px solid #eee;
-                  transition: all 0.15s ease-in-out;
+               .nox & {
+                  background-color: $base2;
+
+                  border: 1px solid $base4;
                   border-top: 2px solid transparent;
-
-                  .nox & {
-                     background-color: $base2;
-
-                     border: 1px solid $base4;
-                     border-top: 2px solid transparent;
-                  }
-
-                  &:hover {
-                     color: $primary-color;
-                  }
                }
-               &.current a {
-                  border-top: 2px solid $primary-color;
+
+               &:hover {
                   color: $primary-color;
-
-                  .nox & {
-                     text-shadow: 0px 0px 10px $primary-color,0px 0px 3px $primary-color;
-                  }
                }
+            }
+            &.current a {
+               border-top: 2px solid $primary-color;
+               color: $primary-color;
 
-               form {
-                  display: block;
-                  text-align: center;
-                  padding: 5px;
-
-                  transition: all 0.15s ease-in-out;
+               .nox & {
+                  text-shadow: 0px 0px 10px $primary-color,0px 0px 3px $primary-color;
                }
+            }
+
+            form {
+               display: block;
+               text-align: center;
+               padding: 5px;
+
+               transition: all 0.15s ease-in-out;
             }
          }
       }
@@ -226,9 +307,53 @@
       .profile {
          margin-top: 30px;
 
+
+         .button-nav {
+            li {
+               float: left;
+            }
+
+            &:after {
+               content: '';
+               display: block;
+               clear: both;
+            }
+         }
       }
 
    }
 
+
+
+
+   .drag-drop {
+      .drag-drop-inside {
+         p {
+            text-align: center;
+         }
+
+         .drag-drop-buttons {
+            label {
+               display: none;
+            }
+            #bp-browse-button {
+               color: #555;
+               border: 1px solid #ccc;
+               background: #f7f7f7;
+               box-shadow: 0 1px 0 #ccc;
+               vertical-align: top;
+
+               font-size: 13px;
+               line-height: 26px;
+               height: 28px;
+               padding: 0 10px 1px;
+
+               border-radius: 3px;
+
+               cursor: pointer;
+            }
+         }
+      }
+   }
 
 }

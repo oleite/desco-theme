@@ -154,4 +154,9 @@ jQuery(document).ready(function($) {
    });
 
 
+
+
+
+   $('.field-visibility-settings').fadeIn(300);
+
 });
