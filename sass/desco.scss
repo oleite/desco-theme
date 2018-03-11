@@ -189,14 +189,19 @@ input[type="submit"] {
    }
 
    #logged-avatar {
-      pointer-events: auto;
-
-      height: 45px;
-      border: 1px solid $primary-color;
-      border-radius: 50%;
       margin-left: auto;
+      display: flex;
+      align-items: center;
 
-      cursor: pointer;
+      img {
+         pointer-events: auto;
+
+         height: 45px;
+         border: 1px solid $primary-color;
+         border-radius: 50%;
+
+         cursor: pointer;
+      }
    }
 
    #sidenav-open {
