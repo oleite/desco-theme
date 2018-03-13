@@ -44,8 +44,35 @@ $featured = get_post_meta( get_the_ID(), 'desco_featured', TRUE ); //possíveis 
 
    <footer class="entry-footer">
 
-         <?php //echo get_avatar( get_the_author_meta( 'user_email' ), '50' ); ?>
+         <div class="author-info jumbotron">
+            <div class="author-info-left">
+               <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ), get_the_author_meta( 'user_nicename' ) ); ?>">
+                  <?php echo get_avatar( get_the_author_meta( 'user_email' ), '100' ); ?>
+               </a>
+            </div>
+            <div class="author-info-right">
+               <p class="comment">Autor:</p>
+               <h1> <?php the_author_posts_link(); ?> </h1>
 
+               <div class="author-description">
+                  <?php
+                     $string = xprofile_get_field_data( 'Descrição' , get_the_author_meta('ID') );
+
+                     echo $string;
+
+
+
+                   ?>
+               </div>
+            </div>
+
+
+
+
+
+
+
+         </div>
    </footer>
 
 </article>
