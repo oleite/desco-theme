@@ -12,6 +12,7 @@
 		wp_enqueue_script('jquery');
 
 		wp_enqueue_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+		//wp_enqueue_style('font-awesome', '//use.fontawesome.com/releases/v5.0.8/css/all.css');
 
 		wp_enqueue_style('generalstyle', get_template_directory_uri().'/css/desco.css', array(), false, 'all');
 		wp_enqueue_script('generaljs', get_template_directory_uri().'/js/desco.js', array(), false, true);

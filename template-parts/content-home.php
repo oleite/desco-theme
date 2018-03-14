@@ -4,6 +4,12 @@ $featured = get_post_meta( get_the_ID(), 'desco_featured', TRUE ); //possíveis 
 
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class('content-home post fade-in'); ?>>
+
+   <?php if (is_sticky()): ?>
+      <i class="sticky-post sticky-left" aria-hidden="true" title="Post fixado"></i>
+      <i class="sticky-post sticky-right" aria-hidden="true" title="Post fixado"></i>
+   <?php endif; ?>
+
    <header class="entry-header">
 
       <?php if(has_post_thumbnail()): ?>

@@ -73,6 +73,25 @@
    }
 }
 
+.sticky-post {
+   position: absolute;
+   width: 0;
+   height: 0;
+   z-index: 1;
+
+   &.sticky-left {
+      border-right: 8px solid transparent;
+      border-top: 8px solid $primary-color;
+   }
+   &.sticky-right {
+      right: 0;
+      border-left: 8px solid transparent;
+      border-top: 8px solid $primary-color;
+   }
+}
+
+
+
 
 .load-more {
    margin-top: 50px;
