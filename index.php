@@ -17,6 +17,24 @@
             ?>
             <?php the_widget('WP_Widget_Search', $instance = array(), $args = array() ) ?>
             <!--<i class="fa fa-facebook-square" aria-hidden="true"></i>-->
+
+
+            <div class="facebook-page">
+               <div class="fb-page fade-in-2"
+                  data-href="https://www.facebook.com/Desconceito/"
+                  data-height="70"
+                  data-small-header="true"
+                  data-adapt-container-width="false"
+                  data-hide-cover="false"
+                  data-show-facepile="false">
+
+                  <blockquote cite="https://www.facebook.com/Desconceito/" class="fb-xfbml-parse-ignore">
+                     <a href="https://www.facebook.com/Desconceito/">Desconceito</a>
+                  </blockquote>
+               </div>
+            </div>
+
+            <div style="clear: both;"></div>
          </div>
 
          <div class="container post-grid js-posts-container">
