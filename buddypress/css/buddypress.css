@@ -14,10 +14,10 @@
 
 .fade-in-2 { opacity: 0; -webkit-animation: fadeIn ease 1; animation: fadeIn ease 1; -webkit-animation-fill-mode: forwards; animation-fill-mode: forwards; -webkit-animation-duration: 0.5s; animation-duration: 0.5s; }
 
-.jumbotron, #buddypress .standard-form fieldset, #buddypress #item-header { background-color: #fafafa; border: 1px solid #eee; -webkit-transition: all 0.15s ease-in-out; transition: all 0.15s ease-in-out; }
-.nox .jumbotron, .nox #buddypress .standard-form fieldset, #buddypress .standard-form .nox fieldset, .nox #buddypress #item-header, #buddypress .nox #item-header { background-color: #0d0c0d; border: 1px solid #111; }
+.jumbotron, #buddypress .standard-form fieldset, #buddypress #item-header, #buddypress #item-body .profile .profile-fields tr { background-color: #fafafa; border: 1px solid #eee; -webkit-transition: all 0.15s ease-in-out; transition: all 0.15s ease-in-out; }
+.nox .jumbotron, .nox #buddypress .standard-form fieldset, #buddypress .standard-form .nox fieldset, .nox #buddypress #item-header, #buddypress .nox #item-header, .nox #buddypress #item-body .profile .profile-fields tr, #buddypress #item-body .profile .profile-fields .nox tr { background-color: #0d0c0d; border: 1px solid #111; }
 
-#buddypress .standard-form p { text-indent: 0; }
+#buddypress p { text-indent: 0; }
 #buddypress .standard-form li { float: none; }
 #buddypress .standard-form label { display: inline-block; margin-top: 30px; margin-bottom: 10px; font-size: 18px; font-weight: bold; color: #999; }
 #buddypress .standard-form fieldset legend { margin-top: 30px; font-size: 18px; font-weight: bold; color: #999; }
@@ -70,6 +70,12 @@
 #buddypress #item-body .profile { margin-top: 30px; }
 #buddypress #item-body .profile .button-nav li { float: left; }
 #buddypress #item-body .profile .button-nav:after { content: ''; display: block; clear: both; }
+#buddypress #item-body .profile .profile-fields { border-collapse: collapse; }
+#buddypress #item-body .profile .profile-fields tr { border-bottom: 3px solid #eee; }
+.nox #buddypress #item-body .profile .profile-fields tr { border-bottom: 3px solid #111; }
+#buddypress #item-body .profile .profile-fields tr .label { padding: 5px; font-weight: bold; color: #888; }
+#buddypress #item-body .profile .profile-fields tr .data { padding-left: 40px; }
+#buddypress .item-list-tabs ul li:nth-child(1):last-child { display: none; }
 #buddypress .drag-drop .drag-drop-inside p { text-align: center; }
 #buddypress .drag-drop .drag-drop-inside .drag-drop-buttons label { display: none; }
 #buddypress .drag-drop .drag-drop-inside .drag-drop-buttons #bp-browse-button { color: #555; border: 1px solid #ccc; background: #f7f7f7; -webkit-box-shadow: 0 1px 0 #ccc; box-shadow: 0 1px 0 #ccc; vertical-align: top; font-size: 13px; line-height: 26px; height: 28px; padding: 0 10px 1px; border-radius: 3px; cursor: pointer; }

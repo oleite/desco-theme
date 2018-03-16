@@ -1,12 +1,11 @@
 @import 'variables'; //Variáveis globais
 
 #buddypress {
+   p {
+      text-indent: 0;
+   }
 
    .standard-form {
-      p {
-         text-indent: 0;
-      }
-
 
       li {
          float: none;
@@ -319,11 +318,40 @@
                clear: both;
             }
          }
+
+         .profile-fields {
+
+            border-collapse: collapse;
+
+            tr {
+               @extend .jumbotron;
+               border-bottom: 3px solid #eee;
+               .nox & {
+                  border-bottom: 3px solid #111;
+               }
+
+               .label {
+                  padding: 5px;
+                  font-weight: bold;
+                  color: #888;
+                  .nox & {
+                  }
+               }
+               .data {
+                  padding-left: 40px;
+               }
+            }
+
+         }
       }
 
    }
 
-
+   .item-list-tabs {
+      ul li:nth-child(1):last-child {
+         display: none;
+      }
+   }
 
 
    .drag-drop {
