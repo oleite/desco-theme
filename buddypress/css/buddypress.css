@@ -70,11 +70,11 @@
 #buddypress #item-body .profile { margin-top: 30px; }
 #buddypress #item-body .profile .button-nav li { float: left; }
 #buddypress #item-body .profile .button-nav:after { content: ''; display: block; clear: both; }
-#buddypress #item-body .profile .profile-fields { border-collapse: collapse; }
+#buddypress #item-body .profile .profile-fields { width: 100%; border-collapse: collapse; }
 #buddypress #item-body .profile .profile-fields tr { border-bottom: 3px solid #eee; }
 .nox #buddypress #item-body .profile .profile-fields tr { border-bottom: 3px solid #111; }
-#buddypress #item-body .profile .profile-fields tr .label { padding: 5px; font-weight: bold; color: #888; }
-#buddypress #item-body .profile .profile-fields tr .data { padding-left: 40px; }
+#buddypress #item-body .profile .profile-fields tr .label { width: 100px; padding: 5px; font-weight: bold; color: #888; }
+#buddypress #item-body .profile .profile-fields tr .data { padding-left: 20px; }
 #buddypress .item-list-tabs ul li:nth-child(1):last-child { display: none; }
 #buddypress .drag-drop .drag-drop-inside p { text-align: center; }
 #buddypress .drag-drop .drag-drop-inside .drag-drop-buttons label { display: none; }
